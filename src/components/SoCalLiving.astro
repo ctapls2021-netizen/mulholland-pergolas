@@ -368,19 +368,44 @@ const projects = [
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initCarousel() {
     const track = document.getElementById('sc-carousel-track');
     if (!track) return;
+    
+    // Evitar que se inicialice doblemente
+    if (track.hasAttribute('data-carousel-init')) return;
+    track.setAttribute('data-carousel-init', 'true');
+
     const slides = track.querySelectorAll('.sc-carousel-slide');
     if (slides.length <= 1) return;
     
     let currentIndex = 0;
     const totalSlides = slides.length;
+    let autoPlayInterval;
     
-    // Auto loop every 3 seconds
-    setInterval(() => {
+    function nextSlide() {
       currentIndex = (currentIndex + 1) % totalSlides;
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }, 3000);
-  });
+    }
+
+    function startAutoPlay() {
+      clearInterval(autoPlayInterval);
+      autoPlayInterval = setInterval(nextSlide, 3000);
+    }
+
+    // Iniciar automático
+    startAutoPlay();
+
+    // Avanzar al hacer clic y reiniciar el contador
+    track.addEventListener('click', () => {
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+
+  // En Astro los scripts se ejecutan al final (defer), así que el DOM ya existe
+  initCarousel();
+  
+  // Por si hay View Transitions activadas
+  document.addEventListener('astro:page-load', initCarousel);
 </script>
