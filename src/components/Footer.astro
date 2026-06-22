@@ -1,0 +1,129 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="footer-new">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <img src="/assets/images/footer/Mulholland-Logo-footer.svg" alt="Mulholland Brand" class="footer-logo" />
+      <p class="footer-desc">
+        Since 1994 we have been designing, fabricating, and installing our USA-made products to the glowing satisfaction of our customers.
+      </p>
+    </div>
+    
+    <div class="footer-divider"></div>
+    
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; {currentYear} Mulholland Brand. All rights reserved.</p>
+      <p class="footer-stats">30+ Years &middot; Made in Our LA Factory &middot; Rust-Proof Aluminum</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+ .footer-new {
+ width: 100%;
+ background-color: #ffffff;
+ display: flex;
+ justify-content: center;
+ padding: 60px 20px 40px;
+ }
+
+ .footer-inner {
+ width: 100%;
+ max-width: 1216px;
+ display: flex;
+ flex-direction: column;
+ }
+
+ .footer-top {
+ display: flex;
+ align-items: center;
+ gap: 30px;
+ margin-bottom: 25px;
+ }
+
+ .footer-logo {
+ width: 280px;
+ height: 51px;
+ flex-shrink: 0;
+ }
+
+ .footer-desc {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 16px;
+ line-height: 23px;
+ color: #635C57;
+ margin: 0;
+ max-width: 700px;
+ }
+
+ .footer-divider {
+ width: 100%;
+ height: 1px;
+ background-color: #2C65B0;
+ margin-bottom: 15px;
+ }
+
+ .footer-bottom {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .footer-legal,
+ .footer-stats {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 12px;
+ line-height: 16px;
+ color: #635C57;
+ margin: 0;
+ }
+
+  @media (max-width: 1024px) {
+  .footer-top {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  }
+
+  .footer-logo {
+  width: 188px !important;
+  height: 34px !important;
+  }
+
+  .footer-desc {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  text-align: center;
+  }
+
+  .footer-divider {
+  width: calc(100% + 40px) !important;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  }
+
+  .footer-bottom {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  }
+
+  .footer-legal {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  text-align: center;
+  order: 2;
+  }
+
+  .footer-stats {
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  text-align: center;
+  order: 1;
+  }
+  }
+</style>

@@ -1,0 +1,226 @@
+---
+const styles = [
+ { name: 'Hi-Tech Aluminum\nGates & Fences', file: 'Hi-Tech Aluminum Gates & Fences' },
+ { name: 'Profile 24 Aluminum\nGates & Fences', file: 'Profile 24 Aluminum Gates & Fences' },
+ { name: 'Wood-Like\nAluminum Series', file: 'Wood-Like Aluminum Series' },
+ { name: 'Glass Series Gates &\nFences', file: 'Glass Series Gates & Fences' },
+ { name: 'Solid Aluminum Series\nGates & Fences', file: 'Solid Aluminum Series Gates & Fences' },
+ { name: 'Laser Cut Aluminum\nGates & Fences', file: 'Laser Cut Aluminum Gates & Fences' },
+ { name: 'Traditional Aluminum\nGates & Fences', file: 'Traditional Aluminum Gates & Fences' },
+ { name: 'Retractable Security\nBars & Gates', file: 'Retractable Security Bars & Gates' },
+ { name: 'Aluminum\nPedestrian Gates', file: 'Aluminum Pedestrian Gates' }
+];
+---
+<section class="gs-section" id="styles">
+  <div class="gs-container">
+    
+    <div class="gs-subtitle">A SPECTRUM OF GATES & FENCES</div>
+    
+    <h2 class="gs-title">Find Your Perfect Gate Style</h2>
+    
+    <p class="gs-text">
+      Explore Mulholland’s Custom Aluminum Designs – From Classic Elegance to Modern Innovation
+    </p>
+
+    <div class="gs-grid">
+      {styles.map((style) => (
+        <div class="gs-card">
+          <div class="gs-img-wrapper">
+            <img src={`/assets/images/gate-styles/${style.file}.jpg`} alt={style.file} class="gs-card-bg" />
+          </div>
+          <div class="gs-overlay">
+            <div class="gs-overlay-top">
+              <img src={`/assets/images/gate-styles/${style.file}.svg`} alt="Icon" class="gs-icon" />
+            </div>
+            <div class="gs-overlay-bottom">
+              {style.name}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</section>
+
+<style is:global>
+ .gs-section {
+ width: 100%; /* force reload */
+ display: flex;
+ justify-content: center;
+ background: #ffffff;
+ padding: 84px 20px 66px 20px;
+ }
+
+ .gs-container {
+ width: 100%;
+ max-width: 1429px; /* Fits 3 columns of 441px + 2 gaps of 53px = 1429px */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ .gs-subtitle {
+ color: #2C65B0;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 600; /* Bold */
+ font-size: 12px;
+ line-height: 16px;
+ letter-spacing: 2.64px;
+ text-transform: uppercase;
+ margin-bottom: 15px;
+ text-align: center;
+ }
+
+ .gs-title {
+ color: #000000;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-size: 45px;
+ line-height: 35px;
+ letter-spacing: -0.9px;
+ margin: 0 0 20px 0;
+ text-align: center;
+ }
+
+ .gs-text {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 500; /* Medium */
+ font-size: 22px;
+ line-height: 28px;
+ color: #000000;
+ text-align: center;
+ margin: 0 0 60px 0;
+ max-width: 900px;
+ }
+
+ /* ─── GRID ────────────────────────────────────────────── */
+ .gs-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 53px;
+ width: 100%;
+ }
+
+ .gs-card {
+ position: relative;
+ width: 100%;
+ aspect-ratio: 441 / 289; /* Keep image proportions */
+ background: #e0e0e0;
+ }
+
+ .gs-img-wrapper {
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ }
+
+ .gs-card-bg {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ transition: transform 0.5s ease;
+ }
+
+ .gs-card:hover .gs-card-bg {
+ transform: scale(1.05); /* Optional subtle hover effect */
+ }
+
+ .gs-overlay {
+ position: absolute;
+ bottom: -25px; /* Stick out 25px below the image */
+ left: 50%;
+ transform: translateX(-50%);
+ z-index: 10;
+ width: 90%;
+ max-width: 243px;
+ height: 123px;
+ display: flex;
+ flex-direction: column;
+ /* Optional slight shadow to make it pop against the image */
+ box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+ }
+
+ .gs-overlay-top {
+ flex: 1;
+ background: #ffffff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .gs-icon {
+ height: 40px; /* Adjust size based on SVG visuals */
+ width: auto;
+ max-width: 80%;
+ }
+
+ .gs-overlay-bottom {
+ background: #2C65B0;
+ color: #ffffff;
+ font-family: 'Raleway', sans-serif;
+ font-weight: 500; /* Medium */
+ font-size: 17px;
+ line-height: 17px;
+ text-align: center;
+ padding: 12px 5px; /* Padding to fit the text perfectly */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ white-space: pre-wrap; /* Honors the \n in the names */
+ }
+
+ /* ─── RESPONSIVE ────────────────────────────────────── */
+ @media (max-width: 1200px) {
+ .gs-grid {
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ }
+ }
+
+ @media (max-width: 768px) {
+  .gs-section {
+  background: #F5F9FF;
+  padding: 25px 20px 15px 20px !important;
+  }
+  .gs-subtitle {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  letter-spacing: 2.64px !important;
+  }
+  .gs-title {
+  font-size: 24px !important;
+  line-height: 27px !important;
+  letter-spacing: -0.9px !important;
+  white-space: nowrap;
+  }
+  .gs-text {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  margin-bottom: 40px;
+  }
+  .gs-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  row-gap: 25px !important; /* 15px for box overhang + 10px visual gap */
+  column-gap: 10px !important;
+  }
+  .gs-overlay {
+  width: 80% !important; /* Make box slightly narrower */
+  height: 72px !important; /* Match Figma height */
+  bottom: -15px; /* Adjust overhang */
+  }
+  .gs-overlay-top {
+  padding: 5px 0;
+  }
+  .gs-icon {
+  height: 20px; /* Scale down icon for mobile */
+  }
+  .gs-overlay-bottom {
+  height: 30px !important; /* Match Figma height */
+  font-size: 9.8px !important;
+  line-height: 9.8px !important;
+  padding: 0 12px !important; /* Increased horizontal padding */
+  }
+  }
+</style>

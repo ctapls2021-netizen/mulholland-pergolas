@@ -1,0 +1,189 @@
+---
+---
+<section class="gallery-one">
+  <!-- DESKTOP GALLERY -->
+  <div class="g1-desktop desktop-only">
+    <div class="g1-top desktop-only">
+      <img src="/assets/images/gallery-1/Mulholland brand (1).webp" alt="Main Gate" class="g1-main-img" />
+      <div class="g1-diagram-wrapper">
+        <img src="/assets/images/gallery-1/icon line.svg" alt="Line pointing to gate" class="g1-line-icon" />
+        <img src="/assets/images/gallery-1/Mulholland brand (5).webp" alt="IST Diagram" class="g1-diagram-img" />
+      </div>
+    </div>
+    <div class="g1-bottom desktop-only">
+      <img src="/assets/images/gallery-1/Mulholland brand (3).webp" alt="Gallery Gate 3" />
+      <img src="/assets/images/gallery-1/Mulholland brand (4).webp" alt="Gallery Gate 4" />
+      <img src="/assets/images/gallery-1/Mulholland brand (2).webp" alt="Gallery Gate 5" />
+    </div>
+  </div>
+
+  <!-- MOBILE GALLERY -->
+  <div class="g1-mobile">
+    <div class="g1-mobile-images">
+      <img src="/assets/images/gallery-1/movil/Mulholland-brand (1).jpg" alt="Gallery Gate Mobile 1" class="g1-m-main" />
+      <div class="g1-m-split">
+        <img src="/assets/images/gallery-1/movil/Mulholland-brand (3).jpg" alt="Gallery Gate Mobile 3" />
+        <img src="/assets/images/gallery-1/movil/Mulholland-brand (2).jpg" alt="Gallery Gate Mobile 2" />
+      </div>
+    </div>
+    <a href="tel:8005625770" class="g1-mobile-cta">
+      <span class="g1-m-cta-text">Request Free On-Site Estimate</span>
+      <span class="g1-m-cta-phone">
+        <svg class="g1-m-phone-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.22101 11.0453C9.35869 11.1085 9.51381 11.1229 9.6608 11.0862C9.8078 11.0495 9.9379 10.9638 10.0297 10.8433L10.2663 10.5333C10.3905 10.3677 10.5516 10.2333 10.7367 10.1407C10.9219 10.0481 11.126 9.99992 11.333 9.99992H13.333C13.6866 9.99992 14.0258 10.1404 14.2758 10.3904C14.5259 10.6405 14.6663 10.9796 14.6663 11.3333V13.3333C14.6663 13.6869 14.5259 14.026 14.2758 14.2761C14.0258 14.5261 13.6866 14.6666 13.333 14.6666C10.1504 14.6666 7.09816 13.4023 4.84773 11.1519C2.59729 8.90143 1.33301 5.84918 1.33301 2.66659C1.33301 2.31296 1.47348 1.97382 1.72353 1.72378C1.97358 1.47373 2.31272 1.33325 2.66634 1.33325H4.66634C5.01996 1.33325 5.3591 1.47373 5.60915 1.72378C5.8592 1.97382 5.99967 2.31296 5.99967 2.66659V4.66659C5.99967 4.87358 5.95148 5.07773 5.85891 5.26287C5.76634 5.44801 5.63194 5.60906 5.46634 5.73325L5.15434 5.96725C5.03195 6.0607 4.94569 6.19364 4.9102 6.34349C4.87472 6.49333 4.8922 6.65084 4.95967 6.78925C5.8708 8.63983 7.36929 10.1365 9.22101 11.0453Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Or Call Now: (800) 562-5770
+      </span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .gallery-one {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding-top: 0;
+  }
+
+  .g1-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  }
+
+  .g1-mobile {
+  display: none;
+  }
+
+ /* ─── TOP SECTION ───────────────────────────────────────── */
+ .g1-top {
+ position: relative;
+ width: 100%;
+ display: flex;
+ }
+
+ .g1-main-img {
+ width: 100%;
+ aspect-ratio: 1920 / 722;
+ object-fit: cover;
+ display: block;
+ }
+
+ .g1-diagram-wrapper {
+ position: absolute;
+ top: 50%;
+ right: 5%;
+ transform: translateY(-50%);
+ display: flex;
+ align-items: center;
+ z-index: 5;
+ }
+
+ .g1-line-icon {
+ width: 163px; /* Actual SVG width */
+ max-width: 15vw; /* Scale on mobile */
+ height: auto;
+ /* Pull diagram closer so line overlaps/connects visually */
+ margin-right: -1vw; 
+ z-index: 2;
+ }
+
+ .g1-diagram-img {
+ width: 748px; 
+ aspect-ratio: 748 / 439; /* Keep proportions */
+ height: auto;
+ max-width: 45vw;
+ object-fit: contain;
+ background: transparent; /* Changed from white to transparent to prevent extra edges */
+ border: none; /* Image already has a border */
+ display: block;
+ position: relative;
+ z-index: 1;
+ box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+ }
+
+ /* ─── BOTTOM SECTION ────────────────────────────────────── */
+ .g1-bottom {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 11px 16px; /* Row gap 11px, Column gap 16px */
+ width: 100%;
+ }
+
+ .g1-bottom img {
+ width: 100%;
+ aspect-ratio: 629 / 351; 
+ object-fit: cover;
+ display: block;
+ }
+
+ /* ─── RESPONSIVE ────────────────────────────────────────── */
+  @media (max-width: 768px) {
+  .g1-desktop, .g1-top, .g1-bottom, .desktop-only {
+  display: none !important;
+  }
+  .g1-mobile {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  }
+  .g1-mobile-images {
+  display: flex;
+  flex-direction: column;
+  }
+  .g1-m-main {
+  width: 100%;
+  height: auto;
+  display: block;
+  }
+  .g1-m-split {
+  display: flex;
+  width: 100%;
+  }
+  .g1-m-split img {
+  width: 50%;
+  height: auto;
+  display: block;
+  }
+  .g1-mobile-cta {
+  background: #2C65B0;
+  padding: 16px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  .g1-m-cta-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(10px, 3vw, 14px);
+  color: #ffffff;
+  font-weight: 500;
+  }
+  .g1-m-cta-phone {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(10px, 3vw, 14px);
+  color: #EAC848;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  }
+  .g1-m-phone-icon {
+  width: 12px;
+  height: auto;
+  }
+  }
+
+  @media (max-width: 768px) {
+  .g1-main-img,
+  .g1-bottom img {
+  aspect-ratio: 629 / 351;
+  height: auto;
+  }
+  }
+</style>

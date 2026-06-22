@@ -1,0 +1,625 @@
+---
+// TRIGGER HMR UPDATE
+---
+<section class="hero">
+ <div class="hero-inner">
+
+  <!-- LEFT COLUMN -->
+  <div class="hero-left">
+  <div class="hero-left-content">
+  <!-- Pill badge -->
+  <div class="hero-pill">
+  <span class="hero-pill-dot"></span>
+  Luxury Gates &amp; Fences · Los Angeles
+  </div>
+
+  <!-- H1 -->
+  <h1 class="hero-title">
+  Elevate Your Curb Appeal &amp; Security with Custom Aluminum Gates &amp; Fences
+  </h1>
+
+  <!-- Description -->
+  <p class="hero-desc-regular">
+  Custom aluminum gates and fences designed, manufactured, and installed by Mulholland Brand.
+  </p>
+  <p class="hero-desc-bold">
+  Durable, maintenance-free solutions built to enhance security, privacy, and curb appeal.
+  </p>
+
+  <!-- Two CTA Buttons -->
+  <div class="hero-buttons">
+  <a href="#estimate" class="hero-btn hero-btn-primary">Request Free On-Site Estimate</a>
+  <a href="tel:+18005625770" class="hero-btn hero-btn-secondary">
+  <img src="/assets/images/icon_phone.svg" alt="" class="btn-phone-icon" />
+  Or Call Now: (800) 562-5770
+  </a>
+  </div>
+  </div><!-- /hero-left-content -->
+
+  <!-- Bottom icons + 30+ stat all inline in same row -->
+  <div class="hero-trust-icons">
+  <div class="trust-item">
+  <img src="/assets/images/icon_30years.svg" alt="30+ Years Experience" />
+  <span>30+ Years Experience</span>
+  </div>
+  <div class="trust-item">
+  <img src="/assets/images/icon_lafactory.svg" alt="Made in Our LA Factory" />
+  <span>Made in Our LA Factory</span>
+  </div>
+  <div class="trust-item">
+  <img src="/assets/images/icon_aluminum.svg" alt="Rust-Proof Aluminum" />
+  <span>Rust-Proof Aluminum</span>
+  </div>
+  <div class="trust-item">
+  <img src="/assets/images/icon_financing.svg" alt="0% Financing Available" />
+  <span>0% Financing Available</span>
+  </div>
+
+  <!-- 30+ stat: inline after icons, with horizontal separator -->
+  <div class="hero-stat">
+  <p class="hero-stat-number">30<sup>+</sup></p>
+  <div class="hero-stat-line"></div>
+  <p class="hero-stat-text">Years Designing, Manufacturing &amp; Installing<br />Across Southern California</p>
+  </div>
+  </div>
+
+
+
+  </div><!-- /hero-left -->
+
+ <!-- RIGHT COLUMN: Form -->
+ <div class="hero-form-col" id="estimate">
+ <div class="hero-form-card">
+ <h2 class="form-title">Ready To Get Started<br />On Your Project?</h2>
+ <form class="hero-form">
+ <input type="text" name="name" placeholder="Name" required />
+ <input type="email" name="email" placeholder="Email" required />
+ <input type="tel" name="phone" placeholder="Phone" required />
+ <input type="text" name="zip" placeholder="Zip Code" required />
+ <div class="select-wrap">
+ <select name="interest" required>
+ <option value="" disabled selected>Product Interest</option>
+ <option value="gate">Custom Gate</option>
+ <option value="fence">Custom Fence</option>
+ <option value="both">Both</option>
+ </select>
+ <span class="select-arrow">&#x2304;</span>
+ </div>
+ <button type="submit" class="form-btn">SCHELUDE YOUR FREE CONSULTATION</button>
+ </form>
+ </div>
+ </div><!-- /hero-form-col -->
+
+ </div><!-- /hero-inner -->
+
+
+</section>
+
+<style>
+ /* ─── Google Fonts ──────────────────────────────────────── */
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700&family=Playfair+Display:wght@500&display=swap');
+
+ /* ─── Section ───────────────────────────────────────────── */
+ .hero {
+ position: relative;
+ width: 100%;
+ height: 100vh;
+ min-height: 700px;
+ background-image: url('/assets/images/hero_bg.jpg');
+ background-size: cover;
+ background-position: center top;
+ background-repeat: no-repeat;
+ display: flex;
+ align-items: stretch;
+ overflow: hidden;
+ /* No overlay — the image already has its own darkness */
+ }
+
+ /* ─── Inner layout ─────────────────────────────────────── */
+ .hero-inner {
+ position: relative;
+ z-index: 1;
+ width: 100%;
+ max-width: 1920px;
+ margin: 0 auto;
+ padding-left: 110px;
+ padding-right: 0; /* form goes to the very edge */
+ display: flex;
+ align-items: stretch;
+ justify-content: space-between;
+ }
+
+ /* ─── LEFT ─────────────────────────────────────────────── */
+ .hero-left {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ flex: 1;
+ padding-right: 40px;
+ padding-top: 80px; /* push below fixed header */
+ padding-bottom: 40px;
+ min-width: 0; /* allow flex shrink */
+ }
+
+ /* Pill */
+ .hero-pill {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ background: rgba(0, 0, 0, 0.36);
+ border: 1px solid #E5E2DE;
+ border-radius: 30px;
+ height: 30px;
+ padding: 0 14px;
+ font-family: 'Inter', sans-serif;
+ font-weight: 500;
+ font-size: 12px;
+ line-height: 16px;
+ letter-spacing: 2.1px;
+ text-transform: uppercase;
+ color: #CCC6C0;
+ width: fit-content;
+ margin-bottom: 28px;
+ }
+ .hero-pill-dot {
+ width: 6px;
+ height: 6px;
+ background: #EAC848;
+ border-radius: 50%;
+ flex-shrink: 0;
+ }
+
+ /* H1 */
+ .hero-title {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 700;
+ font-size: clamp(40px, 4vw, 60px); /* Fluid typography */
+ line-height: 1.05;
+ letter-spacing: -1.5px;
+ color: #ffffff;
+ margin: 0 0 24px 0;
+ max-width: 900px;
+ }
+
+ /* Description lines */
+ .hero-desc-regular {
+ font-family: 'Inter', sans-serif;
+ font-weight: 400;
+ font-size: clamp(15px, 1.2vw, 18px);
+ line-height: 1.6;
+ color: #ffffff;
+ margin: 0 0 4px 0;
+ max-width: 90%; /* allow wrapping to prevent overlap */
+ }
+ .hero-desc-bold {
+ font-family: 'Inter', sans-serif;
+ font-weight: 800;
+ font-size: clamp(15px, 1.2vw, 18px);
+ line-height: 1.6;
+ color: #ffffff;
+ margin: 0 0 36px 0;
+ max-width: 90%;
+ }
+
+ /* ─── Buttons ───────────────────────────────────────────── */
+ .hero-buttons {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 12px;
+ width: 100%;
+ max-width: 582px;
+ min-height: 50px;
+ margin-bottom: 48px;
+ }
+
+ .hero-btn {
+ flex: 1;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 14px;
+ line-height: 20px;
+ color: #FCFCFC;
+ border-radius: 3px;
+ transition: opacity 0.25s;
+ white-space: nowrap;
+ gap: 8px;
+ }
+ .hero-btn:hover { opacity: 0.88; }
+
+ .hero-btn-primary { background: #2C65B0; }
+ .hero-btn-secondary {
+ background: rgba(1, 1, 1, 0.23);
+ border: 1px solid #D7B174;
+ }
+
+ .btn-phone-icon {
+ height: 18px;
+ width: auto;
+ object-fit: contain;
+ }
+
+ /* ─── Icons + 30+ stat — all in one flex row ─────────────── */
+ .hero-trust-icons {
+ display: flex;
+ flex-wrap: wrap; /* allow wrap on smaller screens */
+ align-items: flex-end;
+ gap: 20px;
+ }
+
+ .trust-item {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 6px;
+ flex-shrink: 0; /* never shrink the icon items */
+ }
+ .trust-item img {
+ height: 26px; /* smaller icons */
+ width: auto;
+ object-fit: contain;
+ image-rendering: -webkit-optimize-contrast; /* Try to make it sharper */
+ image-rendering: crisp-edges;
+ }
+ .trust-item span {
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 12px;
+ line-height: 18px;
+ color: #ffffff;
+ text-align: left;
+ white-space: nowrap; /* never break the label onto 2 lines */
+ }
+
+ /* 30+ stat — inline sibling of .trust-item */
+ .hero-stat {
+ display: flex;
+ flex-direction: column;
+ align-items: center; /* center horizontally */
+ margin-left: 24px;
+ }
+ .hero-stat-number {
+ font-family: 'Playfair Display', serif;
+ font-weight: 500;
+ font-size: 64px;
+ line-height: 36px;
+ color: #EAC848;
+ margin: 0;
+ }
+ .hero-stat-number sup {
+ font-size: 36px;
+ vertical-align: super;
+ line-height: 0;
+ }
+ .hero-stat-line {
+ width: 308px;
+ height: 1px;
+ background: #EAC848;
+ margin: 28px 0 16px 0; /* extra space above so the 3 doesn't touch the line */
+ }
+ .hero-stat-text {
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-size: 14px;
+ line-height: 19px;
+ color: #ffffff;
+ margin: 0;
+ text-align: center;
+ }
+
+ /* ─── RIGHT: Form column ─────────────────────────────────── */
+ .hero-form-col {
+ width: 100%;
+ max-width: 577px;
+ min-width: 350px; /* Let it shrink on 1280px */
+ flex: 0 1 577px;
+ height: 100vh; /* match section height */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .hero-form-card {
+ width: 100%;
+ max-width: 577px;
+ height: auto;
+ min-height: 589px;
+ background: linear-gradient(to bottom, #5E97D5 0%, #4467AB 100%);
+ padding: clamp(24px, 3vw, 44px) clamp(24px, 3vw, 48px);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ box-shadow: -8px 0 40px rgba(0,0,0,0.25);
+ box-sizing: border-box;
+ }
+
+ .form-title {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800;
+ font-size: 36px;
+ line-height: 37px;
+ color: #ffffff;
+ text-align: center;
+ margin: 0 0 28px 0;
+ }
+
+ .hero-form {
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ }
+
+ .hero-form input,
+ .hero-form select {
+ width: 100%;
+ height: 48px;
+ padding: 0 16px;
+ border: 1px solid #C3C3C3;
+ background: #ffffff;
+ font-family: 'Poppins', sans-serif;
+ font-weight: 600;
+ font-size: 15px;
+ line-height: 18px;
+ color: #182C49;
+ box-sizing: border-box;
+ outline: none;
+ }
+ .hero-form input::placeholder { color: #182C49; }
+
+ .select-wrap {
+ position: relative;
+ }
+ .select-wrap select {
+ appearance: none;
+ -webkit-appearance: none;
+ cursor: pointer;
+ }
+ .select-arrow {
+ position: absolute;
+ right: 16px;
+ top: 50%;
+ transform: translateY(-50%);
+ font-size: 18px;
+ color: #182C49;
+ pointer-events: none;
+ }
+
+ .form-btn {
+ width: 100%;
+ height: 50px;
+ background: #EAC848;
+ border: none;
+ font-family: 'Poppins', sans-serif;
+ font-weight: 700;
+ font-size: 18px;
+ line-height: 12px;
+ color: #182C49;
+ cursor: pointer;
+ letter-spacing: 0.5px;
+ transition: background 0.25s;
+ margin-top: 4px;
+ }
+ .form-btn:hover { background: #d4b03a; }
+
+ /* ─── Responsive ────────────────────────────────────────── */
+ @media (max-width: 1600px) {
+ .hero-inner { padding-left: 60px; }
+ .hero-title { font-size: 48px; }
+ }
+
+ @media (max-width: 1400px) {
+ .hero-title { font-size: 42px; }
+ .hero-inner { padding-left: 40px; }
+ }
+
+ @media (max-width: 1200px) {
+  .hero {
+  height: auto;
+  min-height: 100svh;
+  }
+  .hero-inner {
+  flex-direction: column;
+  padding: 120px 24px 60px;
+  align-items: center;
+  text-align: center;
+  }
+  .hero-left {
+  padding-right: 0;
+  max-width: 100%;
+  padding-top: 0;
+  align-items: center;
+  }
+  .hero-title, .hero-desc-regular, .hero-desc-bold {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+  .hero-buttons {
+  width: 100%;
+  justify-content: center;
+  }
+  .hero-trust-icons {
+  justify-content: center;
+  margin-bottom: 40px;
+  }
+  .hero-stat {
+  margin-left: 0;
+  margin-top: 20px;
+  }
+  .hero-form-col {
+  width: 100%;
+  min-width: unset;
+  height: auto;
+  justify-content: center;
+  }
+  .hero-form-card {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  }
+  }
+
+  @media (max-width: 768px) {
+  .hero {
+  background-image: none;
+  min-height: auto;
+  height: auto;
+  }
+  .hero-inner {
+  padding: 0;
+  gap: 0;
+  }
+  .hero-left {
+  flex: none;
+  height: calc(100vh - 52px);
+  height: calc(100svh - 52px);
+  width: 100%;
+  background-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.7) 65%, #050505 95%),
+    url('/assets/images/hero/movil/-Mulholland-.webp');
+  background-size: cover;
+  background-position: center top;
+  background-color: transparent;
+  padding: 0; /* Reset desktop paddings */
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  }
+  .hero-left-content {
+  flex: 1;
+  padding: 70px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  }
+  .hero-pill {
+  display: none;
+  }
+  .hero-title {
+  font-size: 24px !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.65px !important;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 100%;
+  }
+  .hero-desc-regular, .hero-desc-bold, .hero-btn-secondary, .hero-stat {
+  display: none !important;
+  }
+  .hero-buttons {
+  width: 100%;
+  margin: 0 0 28px 0; /* Exact 28px gap to trust icons */
+  display: flex;
+  justify-content: center;
+  }
+  .hero-btn-primary {
+  flex: none;
+  width: 212px;
+  height: 39px;
+  min-height: 39px;
+  font-size: 11px;
+  line-height: 16px;
+  margin: 0;
+  }
+  .hero-trust-icons {
+  background: transparent;
+  width: 100%;
+  margin: 0;
+  padding: 0 10px 60px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+  gap: 5px;
+  }
+  .trust-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  }
+  .trust-item img {
+  height: 28px;
+  width: auto;
+  margin: 0;
+  }
+  .trust-item span {
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
+  }
+  .hero-form-col {
+  flex: none;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  }
+  .hero-form-card {
+  height: auto;
+  min-height: unset;
+  border-radius: 0;
+  padding: 30px 32px 50px 32px; /* 30px top, 32px sides, 50px bottom */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  }
+  .form-title {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 28px; /* Calculated to match 461px total height */
+  }
+  .hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px !important; /* Calculated */
+  }
+  .hero-form input,
+  .hero-form select,
+  .hero-form input::placeholder {
+  font-size: 15px !important;
+  line-height: 18px !important;
+  }
+  .hero-form input,
+  .hero-form select {
+  height: 50px !important; /* Calculated */
+  }
+  .form-btn {
+  font-size: 14px !important;
+  line-height: 12px !important;
+  height: 55px !important; /* Calculated */
+  margin-top: 0 !important;
+  }
+  }
+
+ @media (max-width: 640px) {
+ }
+
+  /* ─── TABLET ADAPTATIONS (769px - 1200px) ──────────────── */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .hero-left-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-buttons, .hero-pill {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+</style>

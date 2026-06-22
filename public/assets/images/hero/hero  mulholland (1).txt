@@ -1,0 +1,51 @@
+﻿hero
+
+
+diseño basado en 1920px
+
+
+padding izquierdo 110px
+padding derecho 40px
+
+
+ancho total de los 2 botones 582x50
+
+
+Boton:altura 30, texto: Luxury Gates & Fences · Los Angeles inter mediana CCC6C0 12px, 16 interlineado y 2.1 de entre letras mayuscula, fondo: negro al 36% y el borde de 1 px E5E2DE
+
+
+botones: inter semibold: 14px, 20 de interlineado color: FCFCFC
+boton 1 color de fondo: 2C65B0 radio 3
+boton 2 color de fondo: 010101 al 23% radio 3
+
+
+Texto iconos:  inter semibold 12px, 18 de interlineado blanco
+
+
+30+ Years Experience
+Made in Our LA Factory
+Rust-Proof Aluminum
+0% Financing Available
+
+
+titulo h1: Elevate Your Curb Appeal & Security with Custom Aluminum Gates & Fences Raleway 60px, interlineado 63 y entre letras -1.5px blanco
+
+
+texto: Custom aluminum gates and fences designed, manufactured, and installed by Mulholland Brand. Inter regular 18px, interlineado 29, blanco
+
+
+texto: Durable, maintenance-free solutions built to enhance security, privacy, and curb appeal. inter extra bold,18px, interlineado 29, blanco
+
+
+Formulario, titulo: Ready To Get Started On Your Project?  36px, 37 de interlineado, Raleway extra bold blanco
+
+
+texto campos: poppins semibold  15px, 18 de interlineado, #182C49
+Boton de formulario: EAC848, 18px, 12 de interlineado poppins bold
+
+
++30: Playflair display mediana 64px, interlineado 36, #EAC848
+
+
+texto debajo: Years Designing, Manufacturing & Installing
+Across Southern California  inter semibold 14px, 19 de interlineado blanco

@@ -1,0 +1,427 @@
+---
+const reviews = [
+  { platform: 'Google', score: '5.0', logo: 'google.svg', width: 96.21, height: 41.17 },
+  { platform: 'Facebook', score: '4.9', logo: 'facebook.svg', width: 122.37, height: 23.71 },
+  { platform: 'Houzz', score: '5.0', logo: 'Houzz.svg', width: 125.99, height: 28.87 },
+  { platform: 'Yelp', score: '5.0', logo: 'YELP.svg', width: 98.03, height: 46.84 }
+];
+
+const testimonials = [
+ {
+ title: "The best investment\nwe've made in our\nhome",
+ text: "We spent months looking for a contractor who could handle both our driveway gate and side gates. Other companies wanted us to hire a separate automation guy, but Mulholland did absolutely everything in-house. Their team was incredibly professional, the installation is flawless, and the patented sliding gate operates silently. It looks exactly like natural wood but we never have to paint it. Highly recommend!",
+ name: "Marcus & Sarah K.",
+ city: "Pasadena, CA",
+ verified: "Verified Project: Custom Driveway Gate &\nMatching Side Gate"
+ },
+ {
+ title: "Perfect for coastal\nhomes — zero\nmaintenance!",
+ text: "Living right by the ocean, our old wood fence warped and rotted within three years, and wrought iron just rusts instantly. We upgraded to Mulholland's aluminum horizontal slat fencing and it still looks brand new after two years of salt air and sun. No fading, no rust, and zero maintenance. It turned our backyard into a completely private sanctuary. It was worth every penny.",
+ name: "David L.",
+ city: "Del Mar, CA",
+ verified: "Verified Project: Modern Horizontal Privacy\nFencing"
+ },
+ {
+ title: "Seamless process\nfrom factory to\ninstallation",
+ text: "The fact that they manufacture everything locally in their own factory made a massive difference. We wanted a very specific custom charcoal color to match our home's trim, and they matched it perfectly. They installed over 150 linear feet of fencing and a beautiful automated driveway gate. Having one team handle the entire design, concrete work, and wiring made the process incredibly smooth. Excellent customer service!",
+ name: "Elena G.",
+ city: "Sherman Oaks, CA",
+ verified: "Verified Project: Complete Perimeter Fence\n& Automatic Gate System"
+ }
+];
+---
+<section class="test-section" id="testimonials">
+ <div class="test-blue-box">
+ 
+ <!-- Top Reviews Row -->
+ <div class="test-reviews-row">
+ {reviews.map(r => (
+ <div class="test-review-item">
+ <img src={`/assets/images/testimonials/${r.logo}`} alt={r.platform} class="test-logo" style={`width: ${r.width}px; height: ${r.height}px;`} />
+ <span class="test-score">{r.score}</span>
+ </div>
+ ))}
+ </div>
+
+ <!-- Header Content -->
+ <div class="test-header">
+ <div class="test-subtitle">VOICES OF TRUST</div>
+ <h2 class="test-title">What your neighbors <br class="test-mobile-br" />are saying</h2>
+ <p class="test-desc">With over 30 years of local manufacturing and installation, we have secured and beautified thousands of Southern California homes. Read about their experiences.</p>
+ </div>
+
+ <!-- Data Grid -->
+ <div class="test-grid">
+ {testimonials.map(t => (
+ <div class="test-card">
+ <div class="test-stars">
+ <img src="/assets/images/testimonials/star.svg" alt="5 Stars" />
+ </div>
+ <h3 class="test-card-title">{t.title}</h3>
+ <p class="test-card-text">{t.text}</p>
+ 
+ <div class="test-divider"></div>
+ 
+ <div class="test-author-name">{t.name}</div>
+ <div class="test-author-city">{t.city}</div>
+ 
+ <div class="test-verified">
+ <img src="/assets/images/testimonials/verified.svg" alt="Verified" class="test-verified-icon" />
+ <span class="test-verified-text">{t.verified}</span>
+ </div>
+ </div>
+ ))}
+ </div>
+ 
+ </div>
+</section>
+
+<style is:global>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+ .test-section {
+ width: 100%;
+ min-height: 100vh;
+ background-image: url('/assets/images/testimonials/Mulholland-brand.webp');
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 80px 20px;
+ }
+
+ .test-blue-box {
+ width: 100%;
+ max-width: 1430px;
+ background-color: rgba(44, 101, 176, 0.95); /* #2C65B0 at 95% opacity */
+ border-radius: 10px;
+ padding: 70px 130px; /* Increased lateral padding */
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ /* ─── REVIEWS ROW ───────────────────────────────────── */
+ .test-reviews-row {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 70px;
+ margin-bottom: 60px;
+ flex-wrap: wrap;
+ width: 100%;
+ }
+
+ .test-review-item {
+ display: flex;
+ align-items: center;
+ gap: 15px;
+ }
+
+ .test-logo {
+ /* Dimensions handled inline per logo */
+ display: block;
+ }
+
+ .test-score {
+ font-family: 'Poppins', sans-serif;
+ font-weight: 700; /* Bold */
+ font-size: 32px;
+ line-height: 16px;
+ color: #ffffff;
+ }
+
+ /* ─── HEADER ────────────────────────────────────────── */
+ .test-header {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ margin-bottom: 70px;
+ max-width: 800px;
+ }
+
+ .test-subtitle {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 600; /* Bold */
+ font-size: 12px;
+ line-height: 16px;
+ letter-spacing: 2.64px;
+ color: #ffffff;
+ text-transform: uppercase;
+ margin-bottom: 25px;
+ }
+
+ .test-mobile-br {
+  display: none;
+  }
+
+ .test-title {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-size: 46px;
+ line-height: 45px;
+ letter-spacing: -0.9px;
+ color: #ffffff;
+ margin: 0 0 25px 0;
+ }
+
+ .test-desc {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 16px;
+ line-height: 26px;
+ color: #ffffff;
+ margin: 0;
+ }
+
+ /* ─── GRID ──────────────────────────────────────────── */
+ .test-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 50px;
+ width: 100%;
+ }
+
+ .test-card {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ text-align: left;
+ }
+
+ .test-stars {
+ display: flex;
+ margin-bottom: 25px;
+ }
+ 
+ .test-stars img {
+ height: 31px; /* Natural height of the SVG */
+ width: auto;
+ }
+
+ .test-card-title {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-style: italic;
+ font-size: 30px;
+ line-height: 27.5px;
+ color: #ffffff;
+ margin: 0 0 20px 0;
+ white-space: pre-wrap;
+ }
+
+ .test-card-text {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-style: italic;
+ font-size: 18px;
+ line-height: 26px;
+ color: #ffffff;
+ margin: 0 0 40px 0;
+ flex: 1; /* Aligns dividers nicely if texts are different lengths */
+ }
+
+ .test-divider {
+ width: 100%;
+ max-width: 337px;
+ height: 1px;
+ background-color: #ffffff;
+ margin-bottom: 25px;
+ }
+
+ .test-author-name {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-size: 18px;
+ line-height: 20px;
+ color: #ffffff;
+ margin-bottom: 5px;
+ }
+
+ .test-author-city {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-size: 14px;
+ line-height: 20px;
+ color: #ffffff;
+ margin-bottom: 25px;
+ }
+
+ .test-verified {
+ display: flex;
+ align-items: flex-start;
+ gap: 12px;
+ }
+
+ .test-verified-icon {
+ width: 28px; /* Scale icon for visibility */
+ height: auto;
+ margin-top: -2px;
+ }
+
+ .test-verified-text {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 500; /* Medium */
+ font-size: 14px;
+ line-height: 16px;
+ color: #ffffff;
+ white-space: pre-wrap;
+ }
+
+ /* ─── RESPONSIVE ────────────────────────────────────── */
+ @media (max-width: 1200px) {
+ .test-grid {
+ gap: 30px;
+ }
+ .test-blue-box {
+ padding: 60px 80px;
+ }
+ }
+
+  @media (max-width: 1024px) {
+  .test-section {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  padding: 23px 20px 0px 20px !important;
+  min-height: auto !important;
+  }
+
+  .test-blue-box {
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  }
+
+  .test-header { 
+  order: 1; 
+  margin-bottom: 0 !important;
+  }
+  .test-reviews-row { order: 2; }
+  .test-grid { order: 3; }
+
+  .test-subtitle {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  letter-spacing: 2.64px !important;
+  margin-bottom: 10px !important;
+  }
+
+  .test-title {
+  font-size: 24px !important;
+  line-height: 27px !important;
+  letter-spacing: -0.9px !important;
+  margin-bottom: 38px !important;
+  }
+
+  .test-desc {
+  display: none !important;
+  }
+
+  .test-mobile-br {
+  display: block;
+  }
+
+  .test-reviews-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 10px;
+  width: 100%;
+  margin-bottom: 37px !important;
+  }
+
+  .test-review-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo and score block inside its grid cell */
+  gap: 10px;
+  }
+
+  /* Override inline styles for logos */
+  .test-logo[alt="Google"] { width: 70.51px !important; height: 30.17px !important; }
+  .test-logo[alt="Facebook"] { width: 74px !important; height: 14.34px !important; }
+  .test-logo[alt="Houzz"] { width: 74.18px !important; height: 17px !important; }
+  .test-logo[alt="Yelp"] { width: 75px !important; height: 36px !important; }
+
+  .test-score {
+  font-size: 24px !important;
+  line-height: 12.1px !important;
+  }
+
+  .test-grid {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .test-card {
+  align-items: center !important;
+  text-align: center !important;
+  }
+
+  .test-card:not(:first-child) {
+  display: none !important;
+  }
+
+  .test-stars {
+  display: none !important;
+  }
+
+  .test-card-title {
+  font-size: 30px !important;
+  line-height: 27.5px !important;
+  }
+
+  .test-card-text {
+  font-size: 18px !important;
+  line-height: 20px !important;
+  margin-bottom: 25px !important;
+  }
+
+  .test-divider {
+  width: 310px !important;
+  height: 1px !important;
+  background-color: #ffffff !important;
+  margin: 0 auto 20px auto !important;
+  }
+
+  .test-author-name {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  margin-bottom: 0 !important;
+  width: 100%;
+  }
+
+  .test-author-city {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  margin-bottom: 20px !important;
+  width: 100%;
+  }
+
+  .test-verified {
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  }
+
+  .test-verified-text {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  text-align: left !important; /* The text lines are left-aligned relative to each other */
+  }
+  }
+
+  /* ─── TABLET ADAPTATIONS (769px - 1200px) ──────────────── */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .test-blue-box {
+      max-width: 600px !important;
+      margin: 0 auto !important;
+      padding-left: 50px !important;
+      padding-right: 50px !important;
+    }
+  }
+</style>

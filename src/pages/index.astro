@@ -1,11 +1,58 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section2 from '../components/Section2.astro';
+import Gallery1 from '../components/Gallery1.astro';
+import MaintenanceFree from '../components/MaintenanceFree.astro';
+import GateStyles from '../components/GateStyles.astro';
+import SoCalLiving from '../components/SoCalLiving.astro';
+import TheAdvantage from '../components/TheAdvantage.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Mulholland Brand - Custom Aluminum Gates & Fences">
+	<Header />
+	<main>
+		<Hero />
+		<Section2 />
+		<Gallery1 />
+		<div class="mobile-swap">
+			<MaintenanceFree />
+			<GateStyles />
+		</div>
+		<SoCalLiving />
+		<Testimonials />
+		<TheAdvantage />
+		<FAQ />
+		<CTA />
+	</main>
+	<Footer />
 </Layout>
+
+<style>
+	@media (max-width: 768px) {
+		.mobile-swap {
+			display: flex;
+			flex-direction: column;
+		}
+		.mobile-swap > :global(.mf-section) {
+			order: 2;
+		}
+		.mobile-swap > :global(.gs-section) {
+			order: 1;
+		}
+	}
+</style>
+
+<style is:global>
+	/* ─── TABLET ADAPTATIONS (769px - 1200px) ──────────────── */
+	@media (min-width: 769px) and (max-width: 1200px) {
+		h1 br, h2 br, h3 br, h4 br, h5 br, h6 br, p br {
+			display: none !important;
+		}
+	}
+</style>

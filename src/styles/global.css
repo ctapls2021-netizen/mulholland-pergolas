@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;800&family=Raleway:wght@600;800&display=swap');
+
+:root {
+  --color-primary-blue: #2C65B0;
+  --color-dark-navy: #223967;
+  --color-gold: #EAC848;
+  --color-text-primary: #14110E;
+  --color-text-secondary: #635C57;
+  --color-bg-white: #FFFFFF;
+  --color-bg-light: #F5F9FF;
+  --color-border: #E5E2DE;
+  --color-border-input: #C3C3C3;
+
+  --font-heading: 'Raleway', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-action: 'Poppins', sans-serif;
+
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-dark-navy);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; }
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; }
+
+p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary-blue);
+  transition: var(--transition-smooth);
+}
+
+a:hover {
+  color: var(--color-dark-navy);
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-dark-navy);
+  font-family: var(--font-action);
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  background-color: #d4b040;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: var(--color-primary-blue);
+  color: white;
+  font-family: var(--font-action);
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-dark-navy);
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: var(--transition-smooth);
+  border: 1px solid var(--color-border);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}

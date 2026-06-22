@@ -1,23 +1,85 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Mulholland Brand - Custom Aluminum Gates & Fences" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+
+		<!-- Global Mobile Bottom Call Bar -->
+		<div class="mobile-sticky-cta">
+			<a href="tel:8005625770" class="m-sticky-btn">
+				<img src="/assets/images/icon_phone.svg" alt="Phone" class="m-sticky-icon" />
+				<span>Call Now: (800) 562-5770</span>
+			</a>
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  .mobile-sticky-cta {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .mobile-sticky-cta {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 44px;
+      background-color: rgba(44, 101, 176, 0.90);
+      align-items: center;
+      justify-content: center;
+      z-index: 2147483647 !important; /* Maximum possible z-index */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .m-sticky-btn {
+      width: 280px;
+      height: 30px;
+      border-radius: 26px;
+      background-color: rgba(255, 255, 255, 0.11);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      gap: 5px;
+    }
+    .m-sticky-btn span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15.5px;
+      color: #EAC848 !important;
+    }
+    .m-sticky-icon {
+      width: 14px !important;
+      height: auto !important;
+      object-fit: contain;
+    }
+  }
+</style>
+
+<style is:global>
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 44px;
+    }
+  }
 </style>

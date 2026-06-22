@@ -1,0 +1,386 @@
+---
+const projects = [
+ {
+ city: 'BEL AIR, CA',
+ name: 'Pedestrian Entry Gate',
+ file: 'Pedestrian Entry Gate.webp',
+ className: 'sc-item-left'
+ },
+ {
+ city: 'PASADENA, CA',
+ name: 'Perimeter Fence Run',
+ file: 'Perimeter Fence Run-.webp',
+ className: 'sc-item-rtop'
+ },
+ {
+ city: 'SHERMAN OAKS, CA',
+ name: 'Automated Driveway Gate',
+ file: 'Automated Driveway Gate-.webp',
+ className: 'sc-item-rbot'
+ },
+ {
+ city: 'DEL MAR, CA',
+ name: 'Backyard Privacy Slats',
+ file: 'Backyard Privacy Slats-.webp',
+ className: 'sc-item-bottom'
+ }
+];
+---
+<section class="sc-section">
+  <div class="sc-container">
+    
+    <div class="sc-header-wrapper">
+      <div class="sc-header-grid">
+        <div class="sc-header-col">
+          <div class="sc-header-anchor">
+            <div class="sc-header">
+              <div class="sc-subtitle">
+                <span class="sc-subtitle-gold">SO-CAL</span>
+                <span class="sc-subtitle-white">LIVING</span>
+              </div>
+              
+              <h2 class="sc-title">
+                Inspirational transformations <br class="sc-mobile-br" />
+                <span class="sc-title-mobile-blue">across</span> <span class="sc-title-blue">Southern California</span>
+              </h2>
+              
+              <p class="sc-text">
+                Explore real-world projects designed, manufactured, and installed by our team. See how we combine security, privacy, and premium architectural style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP GRID -->
+    <div class="sc-grid sc-desktop">
+      {projects.map((project) => (
+      <div class={`sc-card ${project.className}`}>
+        <img src={`/assets/images/so-cal-living/${project.file}`} alt={project.name} class="sc-card-img" />
+        <div class="sc-card-overlay">
+          <div class="sc-city">{project.city}</div>
+          <div class="sc-name">{project.name}</div>
+        </div>
+      </div>
+      ))}
+    </div>
+
+    <!-- MOBILE CAROUSEL -->
+    <div class="sc-carousel sc-mobile">
+      <div class="sc-carousel-track" id="sc-carousel-track">
+        {projects.map((project) => (
+        <div class="sc-carousel-slide">
+          <img src={`/assets/images/so-cal-living/movil/${project.name} M.jpg`} alt={project.name} class="sc-card-img" />
+          <div class="sc-card-overlay">
+            <div class="sc-city">{project.city}</div>
+            <div class="sc-name">{project.name}</div>
+          </div>
+        </div>
+        ))}
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<style is:global>
+ .sc-section {
+ width: 100%;
+ background-color: #F5F9FF;
+ display: flex;
+ justify-content: center;
+ padding: 80px 0 218px 0; 
+ }
+
+ .sc-container {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ }
+
+ /* ─── HEADER ────────────────────────────────────────── */
+ .sc-header-wrapper {
+ width: 100%;
+ max-width: 1430px;
+ padding: 0 20px;
+ margin: 0 auto;
+ }
+
+ .sc-header-grid {
+ display: grid;
+ grid-template-columns: repeat(3, minmax(0, 1fr)); /* minmax(0, 1fr) prevents the 800px text from blowing up the column width */
+ gap: 45px;
+ width: 100%;
+ }
+
+ .sc-header-col {
+ width: 100%;
+ }
+
+ .sc-header-anchor {
+ width: 90%;
+ max-width: 364px;
+ margin: 0 auto;
+ }
+
+ .sc-header {
+ width: 800px;
+ max-width: calc(100vw - 40px);
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ text-align: left;
+ margin-bottom: 60px;
+ }
+
+ .sc-subtitle {
+ width: 215px;
+ height: 50px;
+ background-color: #2C65B0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 5px; /* Spacing between SO-CAL and LIVING */
+ margin-bottom: 25px;
+ }
+
+ .sc-subtitle-gold, .sc-subtitle-white {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-style: italic;
+ font-size: 14px; 
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ }
+
+ .sc-subtitle-gold {
+ color: #EAC848;
+ }
+
+ .sc-subtitle-white {
+ color: #ffffff;
+ }
+
+ .sc-title {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 800; /* Bold */
+ font-size: 45px;
+ line-height: 45px;
+ letter-spacing: -0.09px; 
+ color: #14110E;
+ margin: 0 0 20px 0;
+ }
+
+  .sc-title-blue {
+  color: #2C65B0;
+  }
+
+  .sc-title-mobile-blue {
+  color: inherit;
+  }
+
+  .sc-mobile-br {
+  display: none;
+  }
+
+ .sc-text {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 16px;
+ line-height: 16px; 
+ color: #635C57;
+ margin: 0;
+ }
+
+ /* ─── GRID ──────────────────────────────────────────── */
+ .sc-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 15px;
+ width: 100%;
+ }
+
+ .sc-item-left {
+ grid-column: 1;
+ grid-row: 1 / span 2;
+ aspect-ratio: 956.48 / 740.52;
+ }
+
+ .sc-item-rtop {
+ grid-column: 2;
+ grid-row: 1;
+ aspect-ratio: 948.26 / 361.87;
+ }
+
+ .sc-item-rbot {
+ grid-column: 2;
+ grid-row: 2;
+ aspect-ratio: 948.26 / 361.87;
+ }
+
+ .sc-item-bottom {
+ grid-column: 1 / span 2;
+ grid-row: 3;
+ aspect-ratio: 1920 / 740;
+ }
+
+ .sc-card {
+ position: relative;
+ width: 100%;
+ height: 100%;
+ overflow: hidden;
+ }
+
+ .sc-card-img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
+ transition: transform 0.4s ease;
+ }
+
+ .sc-card:hover .sc-card-img {
+ transform: scale(1.03); /* Subtle zoom */
+ }
+
+ .sc-card-overlay {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ padding: 40px 30px 25px 30px; /* Padding bottom for texts */
+ background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ }
+
+ .sc-city {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 12px;
+ line-height: 16px;
+ letter-spacing: 1.2px;
+ color: #ffffff;
+ text-transform: uppercase;
+ margin-bottom: 2px;
+ }
+
+ .sc-name {
+ font-family: 'Raleway', sans-serif;
+ font-weight: 400; /* Regular */
+ font-size: 20px;
+ line-height: 28px;
+ color: #ffffff;
+ }
+
+  /* ─── CAROUSEL ──────────────────────────────────────── */
+  .sc-mobile {
+  display: none;
+  }
+
+  .sc-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  }
+
+  .sc-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  }
+
+  .sc-carousel-slide {
+  min-width: 100%;
+  position: relative;
+  }
+
+  /* ─── RESPONSIVE ────────────────────────────────────── */
+  @media (max-width: 1024px) {
+  .sc-header-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .sc-desktop {
+  display: none !important;
+  }
+  .sc-mobile {
+  display: block;
+  }
+  }
+
+  @media (max-width: 768px) {
+  .sc-section {
+  padding-top: 30px !important;
+  padding-bottom: 0 !important;
+  }
+  .sc-header-grid {
+  grid-template-columns: minmax(0, 1fr);
+  }
+  .sc-header {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  }
+  
+  .sc-subtitle {
+  width: 135px !important;
+  height: 35px !important;
+  max-width: 100% !important;
+  margin: 0 auto 30px auto !important; /* 0 top, 30px bottom, centered horizontally */
+  }
+
+  .sc-subtitle-gold, .sc-subtitle-white {
+  font-size: 12.7px !important;
+  line-height: 12.7px !important;
+  letter-spacing: 1.86px !important;
+  }
+
+  .sc-title {
+  font-size: 24px !important;
+  line-height: 27px !important;
+  letter-spacing: -0.9px !important;
+  text-align: center;
+  }
+
+  .sc-title-mobile-blue {
+  color: #2C65B0 !important;
+  }
+
+  .sc-mobile-br {
+  display: block;
+  }
+
+  .sc-text {
+  display: none !important;
+  }
+  }
+
+  /* ─── TABLET ADAPTATIONS (769px - 1200px) ──────────────── */
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .sc-section {
+      padding-bottom: 40px !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('sc-carousel-track');
+    if (!track) return;
+    const slides = track.querySelectorAll('.sc-carousel-slide');
+    if (slides.length <= 1) return;
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    // Auto loop every 3 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3000);
+  });
+</script>
