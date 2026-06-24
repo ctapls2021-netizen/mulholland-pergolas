@@ -64,7 +64,10 @@
   <div class="hero-stat">
   <p class="hero-stat-number">30<sup>+</sup></p>
   <div class="hero-stat-line"></div>
-  <p class="hero-stat-text">Years Designing, Manufacturing &amp; Installing<br />Across Southern California</p>
+  <p class="hero-stat-text">
+    <span class="hstat-line1">Years Designing, Manufacturing &amp; Installing</span>
+    <span class="hstat-line2">Across Southern California</span>
+  </p>
   </div>
   </div>
 
@@ -402,15 +405,20 @@
  background: #EAC848;
  margin: 20px 0 12px 0; /* Reduced margin */
  }
- .hero-stat-text {
- font-family: 'Inter', sans-serif;
- font-weight: 600;
- font-size: 12px; /* Slightly reduced from 14px to fit narrower line width */
- line-height: 16px;
- color: #ffffff;
- margin: 0;
- text-align: center;
- }
+  .hero-stat-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  }
+  .hstat-line1,
+  .hstat-line2 {
+  display: block !important;
+  white-space: nowrap !important;
+  }
 
  /* ─── RIGHT: Form column ─────────────────────────────────── */
   .hero-form-col {
@@ -512,6 +520,45 @@
  .hero-inner { padding-left: 60px; }
  .hero-title { font-size: 48px; }
  }
+
+  @media (max-width: 1440px) {
+    .hero-inner {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    .hero-left {
+      padding-right: 15px !important;
+    }
+    .hero-form-col {
+      max-width: 410px !important;
+      flex: 0 1 410px !important;
+      margin-left: 10px !important;
+    }
+    .hero-form-card {
+      max-width: 410px !important;
+      padding: 30px 24px !important;
+    }
+    .form-title {
+      font-size: 28px !important;
+      line-height: 32px !important;
+    }
+    .hero-trust-icons {
+      gap: 8px !important;
+    }
+    .trust-item span {
+      font-size: 11px !important;
+    }
+    .hero-stat {
+      margin-left: 8px !important;
+    }
+    .hero-stat-line {
+      width: 210px !important;
+    }
+    .hero-stat-text {
+      font-size: clamp(8px, 0.75vw, 11px) !important;
+      line-height: 1.3 !important;
+    }
+  }
 
  @media (max-width: 1400px) {
  .hero-title { font-size: 42px; }
