@@ -15,16 +15,21 @@
 
   <!-- H1 -->
   <h1 class="hero-title">
-  Elevate Your Curb Appeal &amp; Security with Custom Aluminum Gates &amp; Fences
+  Elevate Your Curb Appeal.<br />Upgrade Your Security.
   </h1>
 
-  <!-- Description -->
-  <p class="hero-desc-regular">
-  Custom aluminum gates and fences designed, manufactured, and installed by Mulholland Brand.
-  </p>
-  <p class="hero-desc-bold">
-  Durable, maintenance-free solutions built to enhance security, privacy, and curb appeal.
-  </p>
+  <!-- Promo Box -->
+  <div class="hero-promo-box">
+    <p class="hero-promo-line1">
+      <span class="hero-promo-gold">Up to 30% OFF</span>
+      <span class="hero-promo-white"> Select Glass Products</span>
+    </p>
+    <p class="hero-promo-sub">Available in Black, White &amp; Clear Glass</p>
+  </div>
+
+  <!-- Product list -->
+  <p class="hero-products">Custom Gates &bull; Fences &bull; Railings &bull; Glass Systems</p>
+  <p class="hero-supply">Limited Supply Available</p>
 
   <!-- Two CTA Buttons -->
   <div class="hero-buttons">
@@ -67,6 +72,29 @@
 
   </div><!-- /hero-left -->
 
+ <!-- FINANCING BAR — solo mobile, entre hero y form -->
+ <div class="financing-bar financing-bar--mobile">
+   <div class="financing-inner">
+     <p class="financing-text">
+       <span class="financing-text-lines">
+         <span class="financing-line-rule"></span>
+         <span class="financing-label">
+           <span class="financing-gold">0% FINANCING</span>
+           <span class="financing-white"> AVAILABLE</span>
+         </span>
+         <span class="financing-line-rule"></span>
+       </span>
+     </p>
+     <div class="financing-cards">
+       <img src="/assets/images/hero/movil/cc-paypal 1.svg" alt="PayPal" class="financing-card-icon" />
+       <img src="/assets/images/hero/movil/cc-amex 1.svg" alt="Amex" class="financing-card-icon" />
+       <img src="/assets/images/hero/movil/cc-discover 1.svg" alt="Discover" class="financing-card-icon" />
+       <img src="/assets/images/hero/movil/cc-mastercard 1.svg" alt="Mastercard" class="financing-card-icon" />
+       <img src="/assets/images/hero/movil/cc-visa 1.svg" alt="Visa" class="financing-card-icon" />
+     </div>
+   </div>
+ </div>
+
  <!-- RIGHT COLUMN: Form -->
  <div class="hero-form-col" id="estimate">
  <div class="hero-form-card">
@@ -94,6 +122,33 @@
 
 
 </section>
+
+<!-- ─── FINANCING BAR (desktop) ──────────────────────────────────── -->
+<div class="financing-bar financing-bar--desktop">
+  <div class="financing-inner">
+    <p class="financing-text">
+      <span class="financing-text-lines">
+        <span class="financing-line-rule"></span>
+        <span class="financing-label">
+          <span class="financing-gold">0% FINANCING</span>
+          <span class="financing-white"> AVAILABLE</span>
+        </span>
+        <span class="financing-line-rule"></span>
+      </span>
+    </p>
+    <div class="financing-cards">
+      <img src="/assets/images/hero/cc-paypal 1.svg" alt="PayPal" class="financing-card-icon" />
+      <img src="/assets/images/hero/cc-amex 1.svg" alt="Amex" class="financing-card-icon" />
+      <img src="/assets/images/hero/cc-discover 1.svg" alt="Discover" class="financing-card-icon" />
+      <img src="/assets/images/hero/cc-mastercard 1.svg" alt="Mastercard" class="financing-card-icon" />
+      <img src="/assets/images/hero/cc-visa 1.svg" alt="Visa" class="financing-card-icon" />
+    </div>
+    <p class="financing-link">
+      <img src="/assets/images/hero/Arrow 4.svg" alt="" class="financing-arrow" />
+      Flexible Payment Options for Your Project
+    </p>
+  </div>
+</div>
 
 <style>
  /* ─── Google Fonts ──────────────────────────────────────── */
@@ -181,25 +236,72 @@
  max-width: 900px;
  }
 
- /* Description lines */
- .hero-desc-regular {
+ /* Promo Box */
+ .hero-promo-box {
+ display: inline-flex;
+ flex-direction: column;
+ align-items: center;
+ border: 1px solid #D9D9D9;
+ width: 613px;
+ max-width: 100%;
+ min-height: 90px;
+ padding: 12px 20px;
+ margin: 0 0 16px 0;
+ justify-content: center;
+ box-sizing: border-box;
+ }
+ .hero-promo-line1 {
+ font-family: 'Raleway', sans-serif;
+ font-size: 32px;
+ line-height: 29px;
+ margin: 0 0 6px 0;
+ text-align: center;
+ }
+ .hero-promo-gold {
+ font-weight: 800;
+ color: #EAC848;
+ }
+ .hero-promo-white {
+ font-weight: 400;
+ color: #ffffff;
+ }
+ .hero-promo-sub {
  font-family: 'Inter', sans-serif;
  font-weight: 400;
- font-size: clamp(15px, 1.2vw, 18px);
- line-height: 1.6;
+ font-style: italic;
+ font-size: 15px;
+ line-height: 20px;
+ color: #ffffff;
+ margin: 0;
+ opacity: 0.85;
+ text-align: center;
+ }
+
+ /* Product list & supply */
+ .hero-products {
+ font-family: 'Inter', sans-serif;
+ font-weight: 700;
+ font-size: 18px;
+ line-height: 24px;
  color: #ffffff;
  margin: 0 0 4px 0;
- max-width: 90%; /* allow wrapping to prevent overlap */
+ width: 613px;
+ max-width: 100%;
+ text-align: center;
  }
- .hero-desc-bold {
+ .hero-supply {
  font-family: 'Inter', sans-serif;
- font-weight: 800;
- font-size: clamp(15px, 1.2vw, 18px);
- line-height: 1.6;
+ font-weight: 500;
+ font-style: italic;
+ font-size: 14px;
+ line-height: 29px;
  color: #ffffff;
- margin: 0 0 36px 0;
- max-width: 90%;
+ margin: 0 0 28px 0;
+ width: 613px;
+ max-width: 100%;
+ text-align: center;
  }
+
 
  /* ─── Buttons ───────────────────────────────────────────── */
  .hero-buttons {
@@ -603,6 +705,105 @@
   height: 55px !important; /* Calculated */
   margin-top: 0 !important;
   }
+
+  /* ── Promo mobile: líneas blancas en vez de recuadro ── */
+  .hero-promo-box {
+  width: calc(100% + 40px) !important;
+  max-width: calc(100% + 40px) !important;
+  border: none !important;
+  border-top: 1px solid #ffffff !important;
+  border-bottom: 1px solid #ffffff !important;
+  padding: 10px 20px !important;
+  margin: 0 -20px 8px -20px !important;
+  align-items: center !important;
+  }
+
+  /* "Up to 30% OFF" en su propia línea */
+  .hero-promo-gold {
+  display: block;
+  font-size: 24px !important;
+  line-height: 25px !important;
+  text-align: center;
+  }
+
+  /* "Select Glass Products" en su propia línea con tamaño distinto */
+  .hero-promo-white {
+  display: block;
+  font-size: 18px !important;
+  line-height: 25px !important;
+  text-align: center;
+  }
+
+  .hero-promo-line1 {
+  font-size: unset !important;
+  line-height: unset !important;
+  margin: 0 !important;
+  text-align: center;
+  }
+
+  .hero-promo-sub {
+  font-size: 14px !important;
+  line-height: 29px !important;
+  }
+
+  .hero-products {
+  font-size: 11px !important;
+  line-height: 29px !important;
+  width: 100% !important;
+  }
+
+  .hero-supply {
+  font-size: 11px !important;
+  line-height: 29px !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
+  }
+
+  /* ── Financing bar mobile ── */
+  .financing-bar {
+  height: 128px !important;
+  padding: 0 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  }
+
+  .financing-inner {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 0 !important;
+  width: fit-content !important;
+  height: 100% !important;
+  }
+
+  .financing-text {
+  width: 100% !important;
+  }
+
+  .financing-label {
+  font-size: 19px !important;
+  line-height: 42px !important;
+  }
+
+  .financing-cards {
+  width: 100% !important;
+  justify-content: space-between !important;
+  padding: 0 !important;
+  gap: 0 !important;
+  }
+
+  .financing-card-icon {
+  margin: 0 !important;
+  height: 22px !important;
+  flex: 1;
+  object-fit: contain;
+  }
+
+  .financing-link {
+  display: none !important;
+  }
   }
 
  @media (max-width: 640px) {
@@ -621,5 +822,118 @@
       margin-right: auto !important;
     }
   }
+
+ /* ─── FINANCING BAR ─────────────────────────────────────── */
+ .financing-bar {
+ width: 100%;
+ height: 116px;
+ background-color: #2C65B0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+
+ .financing-inner {
+ display: flex;
+ align-items: center;
+ gap: 32px;
+ max-width: 1920px;
+ padding: 0 40px;
+ width: 100%;
+ justify-content: center;
+ }
+
+ .financing-text {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 0;
+ margin: 0;
+ white-space: nowrap;
+ }
+
+ .financing-text-lines {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+ }
+
+ .financing-line-rule {
+ width: 100%;
+ height: 1px;
+ background-color: #ffffff;
+ display: block;
+ }
+
+ .financing-label {
+ font-family: 'Inter', sans-serif;
+ font-weight: 700;
+ font-size: 35px;
+ line-height: 52px;
+ margin: 0;
+ white-space: nowrap;
+ display: block;
+ }
+
+ .financing-gold {
+ color: #EAC848;
+ }
+
+ .financing-white {
+ color: #ffffff;
+ }
+
+ .financing-card-icon {
+ height: 32px;
+ width: auto;
+ margin: 0 -6px; /* compensa el padding interno de sombra del SVG */
+ }
+
+ .financing-cards {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding: 0 6px; /* restaura el margen en los extremos */
+ }
+
+ .financing-link {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-family: 'Inter', sans-serif;
+ font-weight: 600;
+ font-style: italic;
+ font-size: 18px;
+ line-height: 27px;
+ color: #EAC848;
+ margin: 0;
+ white-space: nowrap;
+ }
+
+ .financing-arrow {
+ height: 16px;
+ width: auto;
+ flex-shrink: 0;
+ }
+
+ /* Barra desktop: oculta en mobile */
+ .financing-bar--desktop { display: flex; }
+ .financing-bar--mobile  { display: none; }
+
+ /* Financing bar mobile */
+ @media (max-width: 768px) {
+   .financing-bar--desktop { display: none !important; }
+   .financing-bar--mobile  { display: flex !important; width: 100%; }
+   .financing-bar { height: 128px !important; padding: 0 20px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+   .financing-inner { flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 0 !important; width: fit-content !important; height: 100% !important; position: relative !important; top: 5px !important; }
+   .financing-text { width: 100% !important; }
+   .financing-label { font-size: 19px !important; line-height: 42px !important; }
+   .financing-cards { width: 100% !important; display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 0 !important; gap: 0 !important; }
+   .financing-card-icon { flex: none !important; width: 64px !important; height: 52px !important; object-fit: contain !important; margin: 0 !important; }
+   .financing-card-icon:first-child { margin-left: -12px !important; }
+   .financing-card-icon:last-child  { margin-right: -12px !important; }
+   .financing-link { display: none !important; }
+ }
 
 </style>
