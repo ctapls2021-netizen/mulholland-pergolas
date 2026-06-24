@@ -347,9 +347,9 @@
  /* ─── Icons + 30+ stat — all in one flex row ─────────────── */
  .hero-trust-icons {
  display: flex;
- flex-wrap: wrap; /* allow wrap on smaller screens */
+ flex-wrap: nowrap;
  align-items: flex-end;
- gap: 20px;
+ gap: clamp(10px, 1.5vw, 24px);
  }
 
  .trust-item {
@@ -381,7 +381,7 @@
  display: flex;
  flex-direction: column;
  align-items: center; /* center horizontally */
- margin-left: 24px;
+ margin-left: clamp(10px, 2vw, 24px);
  }
  .hero-stat-number {
  font-family: 'Playfair Display', serif;
@@ -397,56 +397,57 @@
  line-height: 0;
  }
  .hero-stat-line {
- width: 308px;
+ width: 260px; /* Reduced from 308px for better fit */
  height: 1px;
  background: #EAC848;
- margin: 28px 0 16px 0; /* extra space above so the 3 doesn't touch the line */
+ margin: 20px 0 12px 0; /* Reduced margin */
  }
  .hero-stat-text {
  font-family: 'Inter', sans-serif;
  font-weight: 600;
- font-size: 14px;
- line-height: 19px;
+ font-size: 12px; /* Slightly reduced from 14px to fit narrower line width */
+ line-height: 16px;
  color: #ffffff;
  margin: 0;
  text-align: center;
  }
 
  /* ─── RIGHT: Form column ─────────────────────────────────── */
- .hero-form-col {
- width: 100%;
- max-width: 577px;
- min-width: 350px; /* Let it shrink on 1280px */
- flex: 0 1 577px;
- height: 100vh; /* match section height */
- display: flex;
- align-items: center;
- justify-content: center;
- }
+  .hero-form-col {
+  width: 100%;
+  max-width: 440px; /* Made narrower (from 577px) to give left content more room */
+  min-width: 320px; /* Let it shrink gracefully */
+  flex: 0 1 440px;
+  height: 100vh; /* match section height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px; /* added spacing gap */
+  }
 
- .hero-form-card {
- width: 100%;
- max-width: 577px;
- height: auto;
- min-height: 589px;
- background: linear-gradient(to bottom, #5E97D5 0%, #4467AB 100%);
- padding: clamp(24px, 3vw, 44px) clamp(24px, 3vw, 48px);
- display: flex;
- flex-direction: column;
- justify-content: center;
- box-shadow: -8px 0 40px rgba(0,0,0,0.25);
- box-sizing: border-box;
- }
+  .hero-form-card {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  min-height: 589px;
+  background: linear-gradient(to bottom, #5E97D5 0%, #4467AB 100%);
+  padding: 36px 30px; /* adjusted padding for breathing room */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -8px 0 40px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+  }
 
- .form-title {
- font-family: 'Raleway', sans-serif;
- font-weight: 800;
- font-size: 36px;
- line-height: 37px;
- color: #ffffff;
- text-align: center;
- margin: 0 0 28px 0;
- }
+  .form-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 30px; /* Reduced from 36px for better proportions and air */
+  line-height: 34px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 24px 0;
+  }
 
  .hero-form {
  display: flex;
