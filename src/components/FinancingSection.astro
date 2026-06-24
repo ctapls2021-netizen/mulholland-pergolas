@@ -1,0 +1,171 @@
+---
+// FinancingSection.astro (Desktop only)
+---
+<section class="financing-section">
+  <div class="financing-section-inner">
+    <!-- Financing Block from Hero -->
+    <div class="fs-financing-row">
+      <p class="fs-financing-text">
+        <span class="fs-financing-text-lines">
+          <span class="fs-financing-line-rule"></span>
+          <span class="fs-financing-label">
+            <span class="fs-financing-gold">0% FINANCING</span>
+            <span class="fs-financing-white"> AVAILABLE</span>
+          </span>
+          <span class="fs-financing-line-rule"></span>
+        </span>
+      </p>
+      
+      <div class="fs-financing-cards">
+        <img src="/assets/images/hero/cc-paypal 1.svg" alt="PayPal" class="fs-financing-card-icon" />
+        <img src="/assets/images/hero/cc-amex 1.svg" alt="Amex" class="fs-financing-card-icon" />
+        <img src="/assets/images/hero/cc-discover 1.svg" alt="Discover" class="fs-financing-card-icon" />
+        <img src="/assets/images/hero/cc-mastercard 1.svg" alt="Mastercard" class="fs-financing-card-icon" />
+        <img src="/assets/images/hero/cc-visa 1.svg" alt="Visa" class="fs-financing-card-icon" />
+      </div>
+
+      <a href="#estimate" class="fs-financing-link">
+        <img src="/assets/images/hero/Arrow 4.svg" alt="" class="fs-financing-arrow" />
+        Flexible Payment Options for Your Project
+      </a>
+    </div>
+
+    <!-- CTA Button -->
+    <a href="#estimate" class="fs-cta-button">
+      Request Free On-Site Estimate
+      <img src="/assets/images/cta/phone contact.svg" alt="Phone" class="fs-phone-icon" />
+      <span class="fs-cta-phone">Or Call Now: (800) 562-5770</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .financing-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C65B0;
+    height: 314px;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .financing-section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  /* Financing Row Styles (Adapted from Hero) */
+  .fs-financing-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: transparent;
+  }
+
+  .fs-financing-text {
+    margin: 0;
+  }
+
+  .fs-financing-text-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .fs-financing-line-rule {
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    display: block;
+  }
+
+  .fs-financing-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    white-space: nowrap;
+  }
+
+  .fs-financing-gold { color: #EAC848; }
+  .fs-financing-white { color: #FFFFFF; }
+
+  .fs-financing-cards {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .fs-financing-card-icon {
+    margin: 0 -5px;
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .fs-financing-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 27px;
+    color: #EAC848;
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .fs-financing-arrow {
+    height: 16px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  /* CTA Button Styles */
+  .fs-cta-button {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 80px;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+  }
+
+  .fs-cta-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .fs-phone-icon {
+    width: 20px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(84%) sepia(24%) saturate(1402%) hue-rotate(345deg) brightness(99%) contrast(96%);
+  }
+
+  .fs-cta-phone {
+    color: #EAC848;
+  }
+
+  /* Hide on mobile */
+  @media (max-width: 768px) {
+    .financing-section {
+      display: none !important;
+    }
+  }
+</style>

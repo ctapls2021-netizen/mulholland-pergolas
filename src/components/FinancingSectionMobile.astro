@@ -1,0 +1,175 @@
+---
+// FinancingSectionMobile.astro (Mobile only)
+---
+<section class="financing-section-mobile">
+  <div class="fsm-inner">
+    <!-- Financing Block (Exact structure from Hero's mobile bar, constrained to 245px width) -->
+    <p class="fsm-financing-text">
+      <span class="fsm-financing-text-lines">
+        <span class="fsm-financing-line-rule"></span>
+        <span class="fsm-financing-label">
+          <span class="fsm-financing-gold">0% FINANCING</span>
+          <span class="fsm-financing-white"> AVAILABLE</span>
+        </span>
+        <span class="fsm-financing-line-rule"></span>
+      </span>
+    </p>
+    
+    <div class="fsm-financing-cards">
+      <img src="/assets/images/hero/movil/cc-paypal 1.svg" alt="PayPal" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-amex 1.svg" alt="Amex" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-discover 1.svg" alt="Discover" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-mastercard 1.svg" alt="Mastercard" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-visa 1.svg" alt="Visa" class="fsm-financing-card-icon" />
+    </div>
+
+    <!-- CTA Button (Pill style with translucent background and original dimensions) -->
+    <a href="#estimate" class="fsm-cta-button">
+      <span class="fsm-cta-text">Request Free On-Site Estimate</span>
+      <span class="fsm-cta-phone">
+        <svg class="fsm-phone-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.22101 11.0453C9.35869 11.1085 9.51381 11.1229 9.6608 11.0862C9.8078 11.0495 9.9379 10.9638 10.0297 10.8433L10.2663 10.5333C10.3905 10.3677 10.5516 10.2333 10.7367 10.1407C10.9219 10.0481 11.126 9.99992 11.333 9.99992H13.333C13.6866 9.99992 14.0258 10.1404 14.2758 10.3904C14.5259 10.6405 14.6663 10.9796 14.6663 11.3333V13.3333C14.6663 13.6869 14.5259 14.026 14.2758 14.2761C14.0258 14.5261 13.6866 14.6666 13.333 14.6666C10.1504 14.6666 7.09816 13.4023 4.84773 11.1519C2.59729 8.90143 1.33301 5.84918 1.33301 2.66659C1.33301 2.31296 1.47348 1.97382 1.72353 1.72378C1.97358 1.47373 2.31272 1.33325 2.66634 1.33325H4.66634C5.01996 1.33325 5.3591 1.47373 5.60915 1.72378C5.8592 1.97382 5.99967 2.31296 5.99967 2.66659V4.66659C5.99967 4.87358 5.95148 5.07773 5.85891 5.26287C5.76634 5.44801 5.63194 5.60906 5.46634 5.73325L5.15434 5.96725C5.03195 6.0607 4.94569 6.19364 4.9102 6.34349C4.87472 6.49333 4.8922 6.65084 4.95967 6.78925C5.8708 8.63983 7.36929 10.1365 9.22101 11.0453Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Or Call Now: (800) 562-5770
+      </span>
+    </a>
+  </div>
+</section>
+
+<style>
+  /* Hidden on desktop */
+  .financing-section-mobile {
+    display: none;
+    width: 100%;
+    background-color: #2C65B0;
+  }
+
+  /* Visible and styled only on mobile */
+  @media (max-width: 768px) {
+    .financing-section-mobile {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      height: auto !important; /* Flow naturally with content */
+      padding: 27px 0 !important; /* Exactly 27px padding top and bottom */
+      box-sizing: border-box;
+    }
+
+    .fsm-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      flex: 1 1 100% !important;
+      max-width: 400px;
+      gap: 14px;
+      box-sizing: border-box;
+    }
+
+    .fsm-financing-text {
+      width: 245px !important; /* Constrained to exactly 245px */
+      margin: 0 auto !important;
+    }
+
+    .fsm-financing-text-lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 245px !important;
+    }
+
+    .fsm-financing-line-rule {
+      width: 245px !important;
+      height: 1px;
+      background-color: #ffffff;
+      display: block;
+    }
+
+    .fsm-financing-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 17px !important; /* Adjusted size to fit inside 245px beautifully */
+      line-height: 38px !important;
+      white-space: nowrap;
+      text-align: center;
+      margin: 0;
+      display: block;
+    }
+
+    .fsm-financing-gold {
+      color: #EAC848;
+    }
+
+    .fsm-financing-white {
+      color: #ffffff;
+    }
+
+    .fsm-financing-cards {
+      width: 245px !important; /* Constrained to exactly 245px */
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 0 !important;
+      gap: 0 !important;
+      margin: 0 auto !important;
+    }
+
+    .fsm-financing-card-icon {
+      flex: none !important;
+      width: 48px !important; /* Scaled down proportionally to fit the 245px container width */
+      height: 38px !important;
+      object-fit: contain !important;
+      margin: 0 !important;
+    }
+
+    /* Compenses internal shadow of card SVGs for alignment */
+    .fsm-financing-card-icon:first-child {
+      margin-left: -9px !important;
+    }
+
+    .fsm-financing-card-icon:last-child {
+      margin-right: -9px !important;
+    }
+
+    /* CTA Button Styles (Matching other mobile CTA buttons with original dimensions) */
+    .fsm-cta-button {
+      background: rgba(255, 255, 255, 0.11) !important;
+      border-radius: 45px !important;
+      width: calc(100% - 32px) !important;
+      height: 44px !important; /* Original height dimension */
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 6px !important;
+      text-decoration: none !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-sizing: border-box !important;
+    }
+
+    .fsm-cta-text {
+      font-family: 'Raleway', sans-serif !important;
+      font-size: clamp(8px, 2.3vw, 12px) !important;
+      color: #ffffff !important;
+      font-weight: 500 !important;
+      white-space: nowrap !important;
+    }
+
+    .fsm-cta-phone {
+      font-family: 'Raleway', sans-serif !important;
+      font-size: clamp(8px, 2.3vw, 12px) !important;
+      color: #EAC848 !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      white-space: nowrap !important;
+    }
+
+    .fsm-phone-icon {
+      width: 12px !important;
+      height: auto !important;
+      flex-shrink: 0 !important;
+    }
+  }
+</style>
