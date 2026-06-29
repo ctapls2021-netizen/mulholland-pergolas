@@ -11,6 +11,15 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Google Tag Manager -->
+		<script is:inline>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-MSS2VZ5');
+		</script>
+		<!-- End Google Tag Manager -->
 		<meta charset="UTF-8" />
 		<meta name="description" content="Mulholland Brand - Custom Aluminum Gates & Fences" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,6 +28,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSS2VZ5"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<slot />
 
 		<!-- Global Mobile Bottom Call Bar -->
@@ -28,6 +41,54 @@ const { title } = Astro.props;
 				<span>Call Now: (800) 562-5770</span>
 			</a>
 		</div>
+
+		<!-- Webhook Form Submission Handler -->
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				const forms = document.querySelectorAll('.hero-form, .cta-form');
+				forms.forEach(form => {
+					form.addEventListener('submit', async (event) => {
+						event.preventDefault();
+						
+						const btn = form.querySelector('button[type="submit"]');
+						const originalText = btn.innerHTML;
+						
+						// Disable form button to prevent double-submit
+						btn.disabled = true;
+						btn.innerHTML = "Sending...";
+
+						// Extract fields
+						const formData = new FormData(form);
+						const data = {};
+						formData.forEach((value, key) => {
+							data[key] = value;
+						});
+
+						// Add page details & tracking parameter payload
+						data['url'] = window.location.href;
+						data['title'] = document.title;
+						data['formType'] = form.classList.contains('hero-form') ? 'Hero Form' : 'Footer CTA Form';
+
+						try {
+							await fetch('https://hooks.zapier.com/hooks/catch/441644/42fuufs/', {
+								method: 'POST',
+								body: JSON.stringify(data)
+							});
+
+							btn.innerHTML = "Thank You!";
+							btn.style.backgroundColor = "#28a745";
+							btn.style.color = "#ffffff";
+							form.reset();
+						} catch (err) {
+							console.error(err);
+							btn.disabled = false;
+							btn.innerHTML = originalText;
+							alert("There was an error sending your message. Please try again or call us.");
+						}
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
 
