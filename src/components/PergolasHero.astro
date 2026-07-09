@@ -1843,20 +1843,9 @@ import PergolasFinancing from './PergolasFinancing.astro';
  .financing-bar--desktop { display: flex; }
  .financing-bar--mobile  { display: none; }
 
- /* Financing bar mobile */
- @media (max-width: 1023px) {
-   .financing-bar.financing-bar--desktop { display: none !important; }
-   .financing-bar--mobile  { display: flex !important; width: 100%; }
-   .financing-bar { height: 128px !important; padding: 0 20px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
-   .financing-inner { flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 8px !important; padding: 0 !important; width: fit-content !important; height: 100% !important; position: relative !important; top: 5px !important; }
-   .financing-text { width: 100% !important; }
-   .financing-label { font-size: 19px !important; line-height: 42px !important; }
-   .financing-cards { width: 100% !important; display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 0 !important; gap: 0 !important; }
-   .financing-card-icon { flex: none !important; width: 64px !important; height: 52px !important; object-fit: contain !important; margin: 0 !important; }
-   .financing-card-icon:first-child { margin-left: -12px !important; }
-   .financing-card-icon:last-child  { margin-right: -12px !important; }
-   .financing-link { display: none !important; }
+ /* Hide financing bar below 1200px */
+ @media (max-width: 1199px) {
+   .financing-bar { display: none !important; }
  }
-
 
 </style>
