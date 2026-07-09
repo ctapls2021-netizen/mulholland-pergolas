@@ -450,8 +450,22 @@ display: none;
   display: block;
 }
 
+/* --- DESKTOP 1024-1200px TWEAKS --- */
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .test-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .test-col:nth-child(3) {
+    display: none;
+  }
+  .test-logos {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
 /* --- MOBILE STYLES (Exclusive Block) --- */
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
 .test-desktop {
 display: none !important;
 }
