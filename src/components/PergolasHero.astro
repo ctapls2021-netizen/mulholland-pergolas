@@ -231,7 +231,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
   .hero-desktop-wrapper { display: block; }
   .hero-mobile-wrapper { display: none; }
   
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
     .hero-desktop-wrapper { display: none !important; }
     .hero-mobile-wrapper { display: block !important; }
   }
@@ -666,6 +666,34 @@ import PergolasFinancing from './PergolasFinancing.astro';
       flex-direction: column;
       align-items: center;
       padding: 0 20px;
+    }
+    .hero-desktop-wrapper .hero-left {
+      align-items: center;
+      text-align: center;
+      height: auto;
+    }
+    .hero-desktop-wrapper .hero-title {
+      justify-content: center;
+      text-align: center;
+      white-space: normal;
+    }
+    .hero-desktop-wrapper .promo-box {
+      margin: 0 auto;
+    }
+    .hero-desktop-wrapper .hero-subtitle {
+      white-space: normal;
+      text-align: center;
+    }
+    .hero-italic {
+      text-align: center;
+    }
+    .hero-desktop-wrapper .hero-buttons {
+      justify-content: center;
+      width: 100%;
+    }
+    .hero-icons {
+      justify-content: center;
+      width: 100%;
     }
     .hero-right {
       width: 100%;
@@ -1319,7 +1347,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
    .hero-title { font-size: 42px; }
    }
 
- @media (max-width: 1200px) {
+ @media (max-width: 1024px) {
   .hero {
   height: auto;
   min-height: 100svh;
@@ -1367,7 +1395,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
   }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1024px) {
   .hero {
   background-image: none;
   min-height: auto;
@@ -1813,7 +1841,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
  .financing-bar--mobile  { display: none; }
 
  /* Financing bar mobile */
- @media (max-width: 1200px) {
+ @media (max-width: 1024px) {
    .financing-bar.financing-bar--desktop { display: none !important; }
    .financing-bar--mobile  { display: flex !important; width: 100%; }
    .financing-bar { height: 128px !important; padding: 0 20px !important; display: flex !important; align-items: center !important; justify-content: center !important; }
