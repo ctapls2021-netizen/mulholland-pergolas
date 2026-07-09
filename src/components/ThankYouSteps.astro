@@ -1,0 +1,159 @@
+---
+---
+<section class="thank-you-steps-section">
+  <h2>What Happens Next?</h2>
+  <div class="steps-container">
+    <div class="step-card">
+      <div class="step-badge">STEP 1</div>
+      <img src="/assets/images/thank-you/Contact Review.svg" alt="Contact Review" />
+      <h3>Contact Review</h3>
+      <p>A member of our local team will review your<br class="desktop-br"/>
+contact information and your specific product<br class="desktop-br"/>
+interest (Gates, Fences, or Pergolas).</p>
+    </div>
+    
+    <div class="step-divider"></div>
+
+    <div class="step-card">
+      <div class="step-badge">STEP 2</div>
+      <img src="/assets/images/thank-you/The Callback.svg" alt="The Callback" />
+      <h3>The Callback</h3>
+      <p>A representative will call you shortly to discuss<br class="desktop-br"/>
+your project ideas and schedule a convenient date<br class="desktop-br"/>
+and time for your free on-site consultation.</p>
+    </div>
+    
+    <div class="step-divider"></div>
+
+    <div class="step-card">
+      <div class="step-badge">STEP 3</div>
+      <img src="/assets/images/thank-you/On-Site Estimate.svg" alt="On-Site Estimate" />
+      <h3>On-Site Estimate</h3>
+      <p>We will meet at your property to take exact<br class="desktop-br"/>
+measurements, discuss your design preferences,<br class="desktop-br"/>
+and provide you with a detailed estimate.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .thank-you-steps-section {
+    padding: 5rem 2rem;
+    max-width: 1312px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .thank-you-steps-section h2 {
+    color: #312C2C;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -0.9px;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .steps-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  .step-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  .step-badge {
+    display: flex;
+    width: 261.5px;
+    height: 36px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.85px;
+    text-transform: uppercase;
+    background-color: #2C65B0;
+    margin-bottom: 2.5rem;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
+  }
+
+  .step-card img {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 1.5rem;
+  }
+
+  .step-card h3 {
+    color: #2C65B0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .step-card p {
+    color: #635C57;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+  }
+
+  .step-divider {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .step-divider {
+      display: block;
+      width: 1px;
+      height: 321px;
+      background: #E5E2DE;
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .desktop-br {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .thank-you-steps-section h2 {
+      font-size: 41px;
+    }
+  }
+</style>

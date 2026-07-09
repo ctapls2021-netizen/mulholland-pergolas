@@ -10,31 +10,31 @@
     <div class="faq-list">
       <details class="faq-item" open>
         <summary class="faq-summary">
-          <span class="faq-question">Can I start with just a fence now and add a matching gate later?</span>
+          <span class="faq-question">How do the motorized louvers operate, and do they close automatically?</span>
           <span class="faq-icon"></span>
         </summary>
         <div class="faq-content">
-          <p>Absolutely. Because we custom-manufacture everything in our local factory and keep your property's specifications on file, we can easily fabricate and install a perfectly matching gate or additional fencing in the future.</p>
-        </div>
-      </details>
-      
-      <details class="faq-item">
-        <summary class="faq-summary">
-          <span class="faq-question">Do you manufacture and install everything in-house?</span>
-          <span class="faq-icon"></span>
-        </summary>
-        <div class="faq-content">
-          <p>Yes. Unlike competitors who sub-contract installation or buy pre-fabricated panels, Mulholland designs, manufactures, and installs everything. This ensures complete quality control, a cohesive and unified look, and a single point of accountability.</p>
+          <p>Our motorized louvers are operated via a sleek, weather-resistant remote control or a smartphone app. For ultimate peace of mind, we can integrate smart rain sensors that automatically close the louvers completely at the very first drop of rain, protecting your outdoor furniture.</p>
         </div>
       </details>
 
       <details class="faq-item">
         <summary class="faq-summary">
-          <span class="faq-question">How does aluminum compare to wood or steel?</span>
+          <span class="faq-question">How does the "Call to Verify Supply Availability" work?</span>
           <span class="faq-icon"></span>
         </summary>
         <div class="faq-content">
-          <p>Our powder-coated 6063 aircraft-grade aluminum is infinitely superior for coastal and sunny climates. It will never rust like steel or wrought iron, and will never rot, warp, or require staining like wood. It's completely maintenance-free.</p>
+          <p></p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-summary">
+          <span class="faq-question">Can the pergolas withstand high winds and the hot SoCal sun?</span>
+          <span class="faq-icon"></span>
+        </summary>
+        <div class="faq-content">
+          <p></p>
         </div>
       </details>
 
@@ -55,14 +55,14 @@
  .faq-section {
  width: 100%;
  background-color: #ffffff;
- padding: 93px 20px 100px 20px;
+ padding: 93px 0 100px 0;
  display: flex;
  justify-content: center;
  }
 
  .faq-container {
- width: 100%;
- max-width: 695px; /* Divider line width requested */
+ width: 695px;
+ max-width: 100%;
  display: flex;
  flex-direction: column;
  }
@@ -127,13 +127,16 @@
  font-size: 18px;
  line-height: 28px;
  color: #14110E;
- max-width: 90%;
+ max-width: 94%;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
  }
 
  .faq-icon {
  width: 24px;
  height: 24px;
- background-image: url('/gates-and-fences/assets/images/faq/+.svg');
+ background-image: url('/assets/images/faq/+.svg');
  background-size: contain;
  background-repeat: no-repeat;
  background-position: center;
@@ -143,7 +146,7 @@
 
  /* When details is open, change icon */
  .faq-item[open] .faq-icon {
- background-image: url('/gates-and-fences/assets/images/faq/-.svg');
+ background-image: url('/assets/images/faq/-.svg');
  }
 
  .faq-content {

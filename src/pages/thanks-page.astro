@@ -1,0 +1,235 @@
+---
+import ThankYouHero from '../components/ThankYouHero.astro';
+import ThankYouSteps from '../components/ThankYouSteps.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Mulholland Brand - Thank You" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/gates-and-fences/favicon.png" />
+		<title>Thank You! - Mulholland Brand</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Raleway:wght@400;700;800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+    <!-- Standalone Header -->
+    <header class="ty-header">
+      <div class="ty-header-container">
+        <div class="ty-logo">
+          <img src="/assets/images/header/Mulholland-Logo-.svg" alt="Mulholland Brand Logo" />
+        </div>
+        
+        <div class="ty-header-right">
+          <a href="tel:8005625770" class="ty-btn-phone">
+            <img src="/assets/images/header/phone.svg" alt="Phone" class="ty-phone-icon" />
+            (800) 562-5770
+          </a>
+        </div>
+      </div>
+    </header>
+
+		<main>
+      <ThankYouHero />
+      <div class="ty-divider"></div>
+      <ThankYouSteps />
+		</main>
+
+    <!-- Standalone Footer -->
+    <footer class="ty-footer">
+      <div class="ty-footer-inner">
+        <div class="ty-footer-top">
+          <img src="/assets/images/footer/Mulholland-Logo-footer.svg" alt="Mulholland Brand" class="ty-footer-logo" />
+          <p class="ty-footer-desc">
+            Since 1994 we have been designing, fabricating, and installing our USA-made products to the glowing satisfaction of our customers.
+          </p>
+        </div>
+        
+        <div class="ty-footer-divider-line"></div>
+        
+        <div class="ty-footer-bottom">
+          <p class="ty-footer-legal">&copy; {currentYear} Mulholland Brand. All rights reserved.</p>
+          <p class="ty-footer-stats">30+ Years &middot; Made in Our LA Factory &middot; Rust-Proof Aluminum</p>
+        </div>
+      </div>
+    </footer>
+	</body>
+</html>
+
+<style is:global>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffff;
+  }
+  
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header Styles */
+  .ty-header {
+    background-color: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #D9D9D9;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .ty-header-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .ty-logo img {
+    height: 45px;
+    width: auto;
+  }
+
+  .ty-btn-phone {
+    display: flex;
+    width: 230px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2C65B0;
+    background-color: transparent;
+    text-decoration: none;
+    gap: 8px;
+    color: #14110E;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 2px;
+  }
+
+  .ty-phone-icon {
+    width: 15px;
+    height: auto;
+    transform: rotate(9deg);
+  }
+
+  /* Main Divider */
+  .ty-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+
+  /* Footer Styles */
+  .ty-footer {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px 40px;
+    border-top: 1px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+
+  .ty-footer-inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ty-footer-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+
+  .ty-footer-logo {
+    width: 280px;
+    height: 51px;
+    flex-shrink: 0;
+  }
+
+  .ty-footer-desc {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #635C57;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  .ty-footer-divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: #2C65B0;
+    margin-bottom: 15px;
+  }
+
+  .ty-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ty-footer-legal,
+  .ty-footer-stats {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: #635C57;
+    margin: 0;
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .ty-header-container {
+      padding: 0 15px;
+    }
+    
+    .ty-logo img {
+      height: 30px;
+    }
+
+    .ty-btn-phone {
+      width: 140px;
+      font-size: 14px;
+      height: 30px;
+    }
+
+    .ty-footer-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .ty-footer-desc {
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .ty-footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
+    
+    .ty-footer-stats {
+      order: -1;
+      font-weight: 700;
+    }
+  }
+</style>

@@ -1,31 +1,33 @@
 ---
+// CTA.astro
 ---
 <section class="cta-section" id="estimate">
   <div class="cta-left">
     <div class="cta-left-content">
-      <div class="cta-subtitle">
-        <span class="cta-subtitle-gold">FREE</span> <span class="cta-subtitle-white">CONSULTATION</span>
-      </div>
-      
-      <h2 class="cta-desktop-title-final">Get your free on-<br/>site estimate</h2>
-      <h2 class="cta-mobile-title-final">Get your free<br/>on-site estimate</h2>
+      <h2 class="cta-title">Get your free on-<br class="mobile-break" />site estimate</h2>
       
       <p class="cta-desc">
-        Tell us about your property and a Mulholland project<br/>
-        designer will reach out to schedule a complimentary,<br/>
+        Tell us about your property and a Mulholland project<br class="mobile-break" />
+        designer will reach out to schedule a complimentary,<br class="mobile-break" />
         no-pressure on-site consultation.
       </p>
 
-      <div class="cta-contact-wrapper">
-        <div class="cta-contact-box">
-          <span class="cta-contact-text">Prefer to speak to a project designer?</span>
-          <img src="/gates-and-fences/assets/images/cta/Prefer to speak to a project designer.svg" alt="Designer icon" class="cta-designer-icon" />
-        </div>
-        <a href="tel:8005625770" class="cta-phone-link">
-          <img src="/gates-and-fences/assets/images/cta/phone contact.svg" alt="Phone" class="cta-phone-icon" />
-          (800) 562-5770
-        </a>
+      <div class="cta-blue-box">
+        <span class="cta-box-gold">SUMMER</span>&nbsp;<span class="cta-box-white">SLOTS FILLING QUICKLY</span>
       </div>
+
+      <div class="cta-call-block">
+        <a href="tel:8005625770" class="cta-phone-link">
+          <img src="/assets/images/pergolas/cta/phone.svg" alt="Phone" class="cta-phone-icon desktop-icon" />
+          <img src="/assets/images/cta/phone-call-white.svg" alt="Phone" class="cta-phone-icon mobile-icon" />
+          CALL (800) 562-5770
+        </a>
+        <div class="cta-verify-text">TO VERIFY PRODUCTION AVAILABILITY</div>
+      </div>
+      
+      <p class="cta-restrictions">
+        *Certain restrictions may apply, call for details.
+      </p>
     </div>
   </div>
 
@@ -57,9 +59,9 @@
         <label for="interest">What are you interested in?</label>
         <select id="interest" name="interest" required>
           <option value="" disabled selected hidden>Select an option</option>
+          <option value="pergola">Custom Pergola</option>
           <option value="gate">Driveway Gate</option>
           <option value="fence">Perimeter Fencing</option>
-          <option value="both">Both Gate & Fence</option>
           <option value="other">Other</option>
         </select>
       </div>
@@ -76,372 +78,408 @@
       </div>
 
       <button type="submit" class="cta-submit-btn">
-        <span class="cta-btn-gold">Request Free</span> On-Site Estimate
+        <span class="btn-text-part1">Request Free</span>&nbsp;<span class="btn-text-part2">On-Site Estimate</span>
       </button>
 
       <p class="cta-privacy">
-        No obligation. We respect your privacy and<br class="cta-privacy-mobile-br"/>
-        never share your information.
+        No obligation. We respect your privacy and never share your information.
       </p>
     </form>
   </div>
 </section>
 
 <style>
- .cta-section {
- width: 100%;
- display: flex;
- min-height: 800px;
- }
-
- /* ─── LEFT SIDE ─────────────────────────────────────────── */
- .cta-left {
- flex: 1;
- position: relative;
- background-image: url('/gates-and-fences/assets/images/cta/Mulhollandbrand-.webp');
- background-size: cover;
- background-position: center;
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 60px 40px;
- }
-
- .cta-left-content {
- position: relative;
- z-index: 2;
- max-width: 500px;
- width: 100%;
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- }
-
- .cta-subtitle {
- width: 291px;
- height: 50px;
- background-color: #2C65B0;
- display: flex;
- align-items: center;
- justify-content: center;
- margin-bottom: 30px;
- }
-
- .cta-subtitle-gold {
- font-family: 'Raleway', sans-serif;
- font-weight: 800; /* Bold */
- font-style: italic;
- font-size: 18px;
- line-height: 18px;
- letter-spacing: 2.64px;
- color: #EAC848;
- margin-right: 8px;
- text-transform: uppercase;
- }
-
- .cta-subtitle-white {
- font-family: 'Raleway', sans-serif;
- font-weight: 800; /* Bold */
- font-style: italic;
- font-size: 18px;
- line-height: 18px;
- letter-spacing: 2.64px;
- color: #ffffff;
- text-transform: uppercase;
- }
-
-  .cta-desktop-title-final {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800; /* Bold */
-  font-size: 45px;
-  line-height: 50px;
-  letter-spacing: -1.2px;
-  color: #ffffff;
-  margin: 0 0 25px 0;
-  }
-
-  .cta-mobile-title-final {
-  display: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800; /* Bold */
-  color: #ffffff;
-  }
-
- .cta-desc {
- font-family: 'Raleway', sans-serif;
- font-weight: 400; /* Regular */
- font-size: 16px;
- line-height: 26px;
- color: #ffffff;
- text-align: right; /* Default for non-desktop if needed, but we override for desktop */
- width: 100%;
- margin: 0 0 35px 0;
- }
-
- @media (min-width: 1201px) {
-   .cta-desc {
-     text-align: left !important;
-   }
- }
-
- .cta-contact-wrapper {
- display: flex;
- flex-direction: column;
- align-items: center; /* Center the phone link relative to the box */
- width: fit-content;
- }
-
- .cta-contact-box {
- background-color: rgba(20, 17, 14, 0.5); /* #14110E at 50% */
- height: 33px;
- padding: 0 25px;
- display: flex;
- align-items: center;
- gap: 25px;
- margin-bottom: 20px;
- }
-
- .cta-contact-text {
- font-family: 'Inter', sans-serif;
- font-weight: 400; /* Regular */
- font-size: 14px;
- line-height: 20px;
- color: #ffffff;
- }
-
- .cta-designer-icon {
- width: 39px;
- height: 39px;
- flex-shrink: 0;
- transform: translateY(-10px);
- }
-
- .cta-phone-link {
- display: flex;
- align-items: center;
- gap: 15px;
- font-family: 'Inter', sans-serif;
- font-weight: 800; /* Bold */
- font-size: 24px;
- line-height: 32px;
- color: #ffffff;
- text-decoration: none;
- }
-
- .cta-phone-icon {
- width: 24px;
- height: auto;
- }
-
- /* ─── RIGHT SIDE (FORM) ────────────────────────────────── */
- .cta-right {
- flex: 1;
- background-color: #F5F9FF;
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 60px 40px;
- }
-
- .cta-form {
- width: 100%;
- max-width: 537px;
- display: flex;
- flex-direction: column;
- gap: 25px;
- }
-
- .form-row {
- display: flex;
- gap: 25px;
- }
-
- .form-row .form-group {
- flex: 1;
- }
-
- .form-group {
- display: flex;
- flex-direction: column;
- gap: 10px;
- }
-
- .form-group label {
- font-family: 'Raleway', sans-serif;
- font-weight: 800; /* Bold */
- font-size: 18px;
- line-height: 20px;
- color: #14110E;
- }
-
- .form-group input,
- .form-group select {
- width: 100%;
- height: 46px;
- background-color: #ffffff;
- border: 1px solid #E5E2DE;
- border-radius: 4px;
- padding: 0 15px;
- font-family: 'Inter', sans-serif;
- font-weight: 400; /* Regular */
- font-size: 14px;
- color: #14110E;
- }
-
- .form-group input::placeholder,
- .form-group select:invalid {
- color: #635C57;
- }
-
- .cta-submit-btn {
- width: 100%;
- height: 48px;
- background-color: #2C65B0;
- border: none;
- border-radius: 4px;
- font-family: 'Inter', sans-serif; /* Fallback for button */
- font-size: 16px;
- font-weight: 600;
- color: #ffffff;
- cursor: pointer;
- transition: background-color 0.2s ease;
- margin-top: 10px;
- }
-
- .cta-submit-btn:hover {
- background-color: #22518c;
- }
-
- .cta-btn-gold {
- color: #EAC848;
- }
-
-  .cta-privacy {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400; /* Regular */
-  font-size: 12px;
-  line-height: 16px;
-  color: #635C57;
-  text-align: center;
-  margin: -10px 0 0 0; /* Pull slightly closer to button */
-  }
-
-  .cta-privacy-mobile-br {
-  display: none;
-  }
-
- /* ─── RESPONSIVE ───────────────────────────────────────── */
-  @media (max-width: 1200px) {
   .cta-section {
-  flex-direction: column;
+    width: 100%;
+    display: flex;
+    min-height: 693px;
   }
-  
-  .cta-left, .cta-right {
-  padding: 60px 20px;
+
+  /* ─── LEFT SIDE ─────────────────────────────────────────── */
+  .cta-left {
+    flex: 1;
+    background-color: #F5F9FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
   }
 
   .cta-left-content {
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
-  }
-  }
-
-  @media (max-width: 1024px) {
-  .cta-desktop-title-final { display: none !important; }
-  .cta-mobile-title-final { 
-  display: block !important; 
-  font-size: 33px !important;
-  line-height: 37px !important;
-  letter-spacing: -0.89px !important;
-  margin-bottom: 15px !important;
-  text-align: center;
-  color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between blocks */
   }
 
-  .cta-subtitle {
-  width: 215px !important;
-  height: 37px !important;
-  margin-bottom: 20px !important;
-  }
-
-  .cta-subtitle-gold, .cta-subtitle-white {
-  font-size: 13.3px !important;
-  line-height: 13.3px !important;
-  letter-spacing: 1.95px !important;
-  color: #ffffff !important;
-  }
-
-  .cta-subtitle-gold {
-  color: #EAC848 !important;
+  .cta-title {
+    width: 439px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #14110E;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+    margin: 0;
   }
 
   .cta-desc {
-  font-size: 11.9px !important;
-  line-height: 11.9px !important;
-  margin-bottom: 25px !important;
-  text-align: center;
-  color: #ffffff !important;
+    width: 447px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #14110E;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
   }
 
-  .cta-contact-box {
-  width: 258px !important;
-  height: 33px !important;
-  padding: 0 10px !important;
-  margin-bottom: 15px !important;
-  justify-content: center !important;
-  gap: 10px !important;
+  .cta-blue-box {
+    width: 412px;
+    height: 50px;
+    background: #2C65B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
   }
 
-  .cta-contact-text {
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 10px !important;
-  line-height: 15px !important;
-  color: #ffffff !important;
+  .cta-box-gold {
+    color: #EAC848;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
   }
 
-   .cta-designer-icon {
-   width: 38px !important;
-   height: 38px !important;
-   transform: translateY(-6px) !important;
-   }
+  .cta-box-white {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 18px;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+  }
+
+  .mobile-break {
+    display: none;
+  }
+
+  .cta-call-block {
+    width: 409px;
+    height: 92px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 
   .cta-phone-link {
-  font-size: 26.25px !important;
-  line-height: 35px !important;
-  width: 258px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #14110E;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23px;
+    text-decoration: none;
+    margin-bottom: 5px;
   }
-  
+
   .cta-phone-icon {
-  width: 20px !important;
-  height: auto !important;
+    width: 20px;
+    height: auto;
+  }
+
+  .mobile-icon {
+    display: none;
+  }
+
+  .cta-verify-text {
+    color: #14110E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .cta-restrictions {
+    color: #14110E;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: -25px 0 0 0; /* Increased negative top margin to pull it even closer */
+  }
+
+  /* ─── RIGHT SIDE (FORM) ────────────────────────────────── */
+  .cta-right {
+    flex: 1;
+    border: 1px solid #ADADAD;
+    background: linear-gradient(180deg, #5E97D5 0%, #4467AB 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
   }
 
   .cta-form {
-  max-width: 341px !important;
-  margin: 0 auto !important;
+    width: 100%;
+    max-width: 537px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cta-form label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
+  }
+
+  .cta-form input,
+  .cta-form select {
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #E5E2DE;
+    border-radius: 4px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #14110E;
+  }
+
+  .cta-form input::placeholder {
+    color: #14110E;
+    opacity: 0.7;
   }
 
   .cta-submit-btn {
-  font-size: 18px !important;
-  line-height: 20px !important;
-  height: 46px !important;
+    width: 100%;
+    height: 56px;
+    background-color: #EAC848;
+    color: #14110E;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
   }
 
-  .cta-privacy-mobile-br {
-  display: block;
-  }
+  .cta-submit-btn:hover {
+    background-color: #d6b438;
   }
 
- @media (max-width: 600px) {
- .form-row {
- flex-direction: column;
- gap: 25px;
- }
- }
+  .btn-text-part1, .btn-text-part2 {
+    color: inherit;
+  }
+
+  .cta-privacy {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin: 5px 0 0 0;
+  }
+
+  /* ─── RESPONSIVE ────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .mobile-break {
+      display: block;
+    }
+
+    .desktop-icon {
+      display: none;
+    }
+
+    .mobile-icon {
+      display: block;
+    }
+
+    .cta-section {
+      flex-direction: column;
+    }
+    
+    .cta-left {
+      background-image: url('/assets/images/cta/pergola-cta-mobile.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 384px;
+      padding: 40px 15px; /* Adjust padding for mobile */
+      box-sizing: border-box;
+    }
+
+    .cta-left-content {
+      gap: 15px; /* Tighter gap for mobile */
+    }
+
+    .cta-title {
+      color: #FFF;
+      font-size: 32px; /* Scale down for mobile */
+      line-height: 36px;
+      height: auto;
+      width: 100%;
+    }
+
+    .cta-desc {
+      color: #FFF;
+      font-size: 14px; /* Scale down for mobile */
+      line-height: 22px;
+      height: auto;
+      width: 100%;
+    }
+
+    .cta-blue-box {
+      width: 100%;
+      max-width: 339px;
+      white-space: nowrap;
+    }
+
+    .cta-box-gold, .cta-box-white {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .cta-call-block {
+      width: 339px;
+      height: 92px;
+      margin-top: 5px;
+    }
+
+    .cta-phone-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 23px; /* 88.462% */
+    }
+    
+    .cta-phone-icon {
+      filter: none; /* Removed the invert filter since we have a dedicated icon now */
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .cta-verify-text {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23px;
+    }
+
+    .cta-restrictions {
+      display: flex;
+      width: 329px;
+      height: 16px;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 185.714% */
+      margin: -15px 0 0 0; /* Pulled it even closer with negative margin */
+    }
+
+    .cta-right {
+      background: #F5F9FF;
+      padding: 40px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .cta-form label {
+      color: #14110E;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 20px; /* 111.111% */
+    }
+
+    .cta-privacy {
+      color: #14110E;
+    }
+
+    .cta-submit-btn {
+      background-color: #2C65B0;
+    }
+
+    .btn-text-part1 {
+      color: #EAC848;
+    }
+
+    .btn-text-part2 {
+      color: #FFFFFF;
+    }
+
+    .cta-submit-btn:hover {
+      background-color: #23528f; /* Slightly darker blue on hover */
+    }
+
+    .form-row {
+      flex-direction: column;
+    }
+  }
 </style>

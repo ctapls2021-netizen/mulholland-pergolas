@@ -1,0 +1,202 @@
+---
+// PergolasFeatures.astro
+---
+<section class="pergolas-features-section">
+  <div class="pf-image-wrapper">
+    <img src="/assets/images/pergolas/pergola-features.jpg" alt="Pergola Features" class="pf-image" />
+  </div>
+
+  <div class="pf-container">
+    <div class="pf-content">
+      
+      <!-- Feature 1 -->
+      <div class="pf-feature">
+        <img src="/assets/images/pergolas/icon-whisper.svg" alt="Whisper Quiet" class="pf-icon" />
+        <div class="pf-text-block">
+          <h3 class="pf-title">Whisper-Quiet Motorized Louvers</h3>
+          <p class="pf-desc">
+            Smart, hidden electric motors rotate the louvers smoothly from 0° to 130° for perfect shade-matching throughout the day.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="pf-feature">
+        <img src="/assets/images/pergolas/icon-zeromaint.svg" alt="Zero Maintenance" class="pf-icon" />
+        <div class="pf-text-block">
+          <h3 class="pf-title">Zero-Maintenance Wood-Look Finish</h3>
+          <p class="pf-desc">
+            Enjoy the warm, organic texture of natural cedar or redwood with a marine-grade powder coating that never rots, warps, cracks, or requires staining.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .pergolas-features-section {
+    position: relative;
+    width: 100%;
+    min-height: 535px; /* Matches the image height style from previous section, or flexible */
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .pf-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1719px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; /* Push content to the right */
+    align-items: center;
+    padding: 60px 40px;
+    box-sizing: border-box;
+  }
+
+  .pf-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .pf-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pf-icon {
+    width: 93px;
+    height: 93px;
+    object-fit: contain;
+  }
+
+  .pf-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .pf-title {
+    color: #2C65B0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0;
+    display: flex;
+    max-width: 436px;
+    min-height: 24px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pf-desc {
+    color: #635C57;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+    display: flex;
+    max-width: 593px;
+    min-height: 40px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .pf-image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    /* Take up the left half of the screen */
+    width: 50%;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .pf-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  @media (max-width: 1200px) {
+    .pergolas-features-section {
+      flex-direction: column;
+    }
+    .pf-image-wrapper {
+      display: none;
+    }
+    .pf-container {
+      justify-content: center;
+      padding: 60px 20px;
+    }
+    .pf-content {
+      align-items: center;
+      text-align: center;
+    }
+    .pf-title {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .pf-desc {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .pf-icon {
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .pf-feature {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .pf-text-block {
+      align-items: flex-start;
+      text-align: left;
+    }
+    .pf-icon {
+      width: 56px !important;
+      height: 56px !important;
+      margin: 0 !important;
+    }
+    .pf-title {
+      display: flex;
+      width: 100%;
+      max-width: 283px;
+      min-height: 24px;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px !important;
+      line-height: 24px !important;
+      text-align: left !important;
+      margin: 0 !important;
+    }
+    .pf-desc {
+      width: 100%;
+      max-width: 260px;
+      font-size: 14px !important;
+      line-height: 20px !important;
+      text-align: left !important;
+      margin: 0 !important;
+    }
+  }
+</style>

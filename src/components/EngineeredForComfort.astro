@@ -1,0 +1,243 @@
+---
+// EngineeredForComfort.astro
+---
+<section class="engineered-section">
+  <div class="ec-container">
+    <div class="ec-content">
+      <div class="ec-subtitle-container">
+        <img src="/assets/images/pergolas/engineered-for-comfort-icon.svg" alt="Icon" class="ec-icon" />
+        <h3 class="ec-subtitle">
+          <span class="ec-gold">Engineered</span>
+          <span class="ec-white"> for Comfort</span>
+        </h3>
+      </div>
+
+      <h2 class="ec-title">
+        Smart Outdoor Living &<br />Motorized Louvered Systems
+      </h2>
+
+      <p class="ec-text-main">
+        Custom-designed pergolas, motorized rotating louvers, and smart home integration.
+      </p>
+
+      <p class="ec-text-desc">
+        Don't let the harsh California sun force you indoors. Our custom-engineered louvered pergolas give you absolute control over your outdoor climate. With the touch of a button, a remote control, or a smartphone app, you can rotate the aluminum louvers to block 100% of overhead sun, angle them to catch a cool breeze, or close them completely to create a fully waterproof roof during winter rains.
+      </p>
+    </div>
+  </div>
+  
+  <div class="ec-image-wrapper">
+    <img src="/assets/images/pergolas/engineered-for-comfort.jpg" alt="Engineered for Comfort" class="ec-image" />
+  </div>
+</section>
+
+<style>
+  .engineered-section {
+    position: relative;
+    width: 100%;
+    height: 695px;
+    background-color: #2C65B0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .ec-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1719px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
+  .ec-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 632px;
+  }
+
+  .ec-subtitle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .ec-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .ec-subtitle {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 16.16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .ec-gold {
+    color: #EAC848;
+  }
+
+  .ec-white {
+    color: #FFF;
+  }
+
+  .ec-title {
+    display: flex;
+    width: 100%;
+    max-width: 620px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 45px;
+    letter-spacing: -0.9px;
+    margin: 0;
+  }
+
+  .ec-text-main {
+    width: 100%;
+    max-width: 597px;
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0;
+  }
+
+  .ec-text-desc {
+    width: 100%;
+    max-width: 632px;
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .ec-image-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 535px;
+    z-index: 5;
+    /* Adjust width to extend from center to right edge */
+    width: 50%; 
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ec-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
+
+  @media (max-width: 1200px) {
+    .engineered-section {
+      height: auto;
+      padding: 60px 0 0 0;
+      flex-direction: column;
+    }
+    .ec-container {
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+    .ec-content {
+      align-items: center;
+      text-align: center;
+    }
+    .ec-subtitle-container {
+      justify-content: center;
+    }
+    .ec-title {
+      text-align: center;
+    }
+    .ec-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .ec-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .ec-image {
+      content: url('/assets/images/pergolas/engineered-for-comfort-mobile.jpg');
+      height: 222px !important;
+      width: 100%;
+      object-fit: cover;
+    }
+    .ec-content {
+      gap: 15px !important;
+    }
+    .ec-subtitle-container {
+      display: flex;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 8px;
+    }
+    .ec-icon {
+      width: 20px !important;
+      height: 20px !important;
+    }
+    .ec-subtitle {
+      font-size: 10px !important;
+      font-weight: 800 !important;
+      line-height: 16.16px !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+    }
+    .ec-title {
+      display: flex;
+      width: 100%;
+      max-width: 359px;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 24px !important;
+      line-height: 25px !important;
+      margin: 0 auto;
+    }
+    .ec-text-main {
+      width: 100%;
+      max-width: 308px !important;
+      font-size: 18px !important;
+      line-height: 20px !important;
+      font-weight: 500 !important;
+      margin: 0 auto;
+    }
+    .ec-text-desc {
+      width: 100%;
+      max-width: 320px;
+      font-size: 14px !important;
+      line-height: 20px !important;
+      margin: 0 auto;
+    }
+  }
+</style>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PergolasHero from '../components/PergolasHero.astro';
+import PergolasFinancing from '../components/PergolasFinancing.astro';
+import PergolasSection2 from '../components/PergolasSection2.astro';
+import EngineeredForComfort from '../components/EngineeredForComfort.astro';
+import PergolasFeatures from '../components/PergolasFeatures.astro';
+import PrivacyScreen from '../components/PrivacyScreen.astro';
+import BlueCTAStrip from '../components/BlueCTAStrip.astro';
+import BlueCTAStripMobile from '../components/BlueCTAStripMobile.astro';
+import PergolaStyles from '../components/PergolaStyles.astro';
+import SoCalLiving from '../components/SoCalLiving.astro';
+import FinancingSection from '../components/FinancingSection.astro';
+import Testimonials from '../components/Testimonials.astro';
+import PergolaFeaturesGrid from '../components/PergolaFeaturesGrid.astro';
+import FAQ from '../components/FAQ.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Mulholland Brand - Custom Pergolas">
+  <Header />
+  
+  <main>
+    <PergolasHero />
+    <div class="desktop-financing-only">
+      <PergolasFinancing />
+    </div>
+    <PergolasSection2 />
+    <EngineeredForComfort />
+    <PergolasFeatures />
+    <PrivacyScreen />
+    <BlueCTAStrip />
+    <PergolaStyles />
+    <BlueCTAStripMobile />
+    <SoCalLiving />
+    <FinancingSection />
+    <Testimonials />
+    <PergolaFeaturesGrid />
+    <FAQ />
+    <CTA />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  @media (max-width: 1200px) {
+    .desktop-financing-only {
+      display: none !important;
+    }
+  }
+</style>

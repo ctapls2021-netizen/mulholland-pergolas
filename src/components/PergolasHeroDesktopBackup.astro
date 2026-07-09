@@ -1,0 +1,731 @@
+---
+import '../styles/global.css';
+---
+<section class="hero-pergolas">
+  <div class="hero-pergolas-bg">
+    <img src="/assets/images/pergolas/Mulholland-pergola.jpg" alt="Mulholland Pergolas" class="hero-bg-img" />
+    <div class="hero-overlay-gradient"></div>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="luxury-pill">
+        <span class="pill-dot"></span>
+        <span class="pill-text">LUXURY OUTDOOR LIVING</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-gold">Save 20%</span>
+        <span class="title-white">&nbsp;on Custom Pergolas</span>
+      </h1>
+
+      <div class="mobile-separator"></div>
+
+      <div class="promo-box">
+        <div class="promo-plus">+</div>
+        <div class="promo-text-wrap">
+          <div class="promo-text">
+            <span class="promo-white">Get a&nbsp;</span>
+            <span class="promo-gold">Free Designer</span>
+            <span class="promo-white">&nbsp;Privacy Screen</span>
+          </div>
+          <div class="promo-subtext">Available in Black, White & Clear Glass</div>
+        </div>
+      </div>
+
+      <div class="mobile-separator"></div>
+
+      <div class="hero-text-group">
+        <p class="hero-subtitle">
+          Turn your patio into a luxury, maintenance-free retreat with custom rust-proof aluminum.
+        </p>
+        <p class="hero-italic">
+          Limited summer installation slots available.
+        </p>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#estimate" class="btn-blue">
+          <span class="btn-bold">Request Complimentary</span>
+          <span class="btn-semibold">On-Site Estimate</span>
+        </a>
+        <a href="tel:8005625770" class="btn-white">
+          <img src="/assets/images/pergolas/phone-b-2.svg" alt="Phone" class="btn-icon" />
+          <span class="btn-semibold">Or Call Now: </span>
+          <span class="btn-black">(800) 562-5770</span>
+        </a>
+      </div>
+
+      <div class="hero-icons">
+        <div class="icon-item">
+          <img src="/assets/images/pergolas/30-years-experience.svg" alt="30+ Years Experience" class="blue-icon-mobile" />
+          <span>30+ Years Experience</span>
+        </div>
+        <div class="icon-item">
+          <img src="/assets/images/pergolas/made-in-usa.svg" alt="Made in Our LA Factory" class="blue-icon-mobile" />
+          <span>Made in Our LA Factory</span>
+        </div>
+        <div class="icon-item">
+          <img src="/assets/images/pergolas/rust-proof-aluminum.svg" alt="Rust-Proof Aluminum" class="blue-icon-mobile" />
+          <span>Rust-Proof Aluminum</span>
+        </div>
+        <div class="icon-item">
+          <img src="/assets/images/pergolas/0-percent-financing.svg" alt="0% Financing Available" class="blue-icon-mobile" />
+          <span>0% Financing Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" id="estimate">
+      <div class="form-container">
+        <div class="form-top-bar">
+          0% Financing Available • 18 Months 0% interest*
+        </div>
+        <div class="form-inner">
+          <h2 class="form-title">Ready To Get Started On Your Project?</h2>
+          <form class="hero-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone" required />
+            </div>
+            <div class="form-group">
+              <input type="text" name="zip" placeholder="Zip Code" required />
+            </div>
+            <div class="form-group">
+              <select name="product" required>
+                <option value="" disabled selected>Product Interest</option>
+                <option value="Motorized Louvered Pergola">Motorized Louvered Pergola</option>
+                <option value="Solid/Slatted Cover">Solid/Slatted Cover</option>
+                <option value="Classic Pergola">Classic Pergola</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">SCHEDULE YOUR COMPLIMENTARY CONSULTATION</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-pergolas {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+
+  .hero-pergolas-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1719px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .hero-left {
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .luxury-pill {
+    display: inline-flex;
+    padding: 8px 15px 10px 15px;
+    align-items: center;
+    gap: 9.4px;
+    border-radius: 40px;
+    border: 1.2px solid #E5E2DE;
+    background: rgba(0, 0, 0, 0.36);
+    width: fit-content;
+    margin-bottom: auto;
+  }
+
+  .pill-dot {
+    width: 7.2px;
+    height: 7.2px;
+    border-radius: 50%;
+    background: #C69C57;
+  }
+
+  .pill-text {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 14.4px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: 2.592px;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    line-height: 54px; /* 90% */
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+  }
+
+  .title-gold {
+    color: #EAC848;
+    font-weight: 800;
+  }
+
+  .title-white {
+    color: #FFF;
+    font-weight: 800;
+  }
+
+  .promo-box {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    padding: 10px 20px;
+    gap: 15px;
+  }
+
+  .promo-plus {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: -1.5px;
+  }
+
+  .promo-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .promo-white {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px; /* 135% */
+    letter-spacing: -1.5px;
+  }
+  
+  .promo-gold {
+    color: #EAC848;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 54px;
+    letter-spacing: -1.5px;
+  }
+
+  .promo-subtext {
+    display: none; /* Only show on mobile */
+  }
+  
+  .mobile-separator {
+    display: none;
+  }
+
+  .hero-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: auto;
+  }
+
+  .hero-subtitle {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 150% */
+    max-width: 630px;
+    margin: 0;
+  }
+
+  .hero-italic {
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 25.6px; /* 160% */
+    margin: 0;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 24px;
+  }
+
+  .btn-blue {
+    display: inline-flex;
+    width: 370px;
+    height: 50px;
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2C65B0;
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+  }
+
+  .btn-blue .btn-bold {
+    font-weight: 800;
+    margin-right: 4px;
+  }
+
+  .btn-blue .btn-semibold {
+    font-weight: 600;
+  }
+
+  .btn-white {
+    display: inline-flex;
+    width: 370px;
+    height: 50px;
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #FFF;
+    text-decoration: none;
+    gap: 8px;
+    color: #2C65B0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+  }
+
+  .btn-white .btn-icon {
+    width: 16px;
+    height: 18px;
+  }
+
+  .btn-white .btn-semibold {
+    color: #2C65B0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .btn-white .btn-black {
+    color: #2C65B0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 20px;
+  }
+
+  .hero-icons {
+    display: flex;
+    width: 870px;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-top: auto; 
+    align-items: flex-start;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .icon-item img {
+    height: 40px;
+    width: auto;
+  }
+
+  .icon-item span {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14.756px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20.289px; /* 137.5% */
+    white-space: nowrap;
+  }
+
+  .hero-right {
+    width: 577px;
+    flex-shrink: 0;
+  }
+
+  .form-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ADADAD;
+    background: linear-gradient(180deg, #5E97D5 0%, #4467AB 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .form-top-bar {
+    width: 100%;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.1);
+    color: #EAC848;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 37px;
+    text-transform: capitalize;
+  }
+
+  .form-inner {
+    padding: 30px 56px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin: 0 0 30px 0;
+  }
+
+  .hero-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #C3C3C3;
+    background: #FFF;
+    padding: 0 15px;
+    color: #182C49;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    outline: none;
+  }
+
+  .form-group input::placeholder {
+    color: #182C49;
+    text-transform: capitalize;
+  }
+
+  .submit-btn {
+    width: 100%;
+    height: 49px;
+    background: #EAC848;
+    border: 1px solid rgba(30, 129, 206, 0.47);
+    border-radius: 4px;
+    color: #223967;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+  }
+
+  .submit-btn:hover {
+    background: #f0d56b;
+  }
+
+  @media (max-width: 1750px) {
+    .hero-container {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .hero-right {
+      width: 100%;
+      max-width: 577px;
+    }
+  }
+
+  /* MOBILE EXACTLY AS GATES AND FENCES */
+  @media (max-width: 768px) {
+    .hero-pergolas {
+      background-image: none;
+      min-height: auto;
+      height: auto;
+      padding: 0;
+    }
+    .hero-pergolas-bg {
+      display: none;
+    }
+    .hero-container {
+      padding: 0;
+      gap: 0;
+    }
+    .hero-left {
+      flex: none;
+      height: calc(100vh - 52px);
+      height: calc(100svh - 52px);
+      width: 100%;
+      background-image: 
+        linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.7) 65%, #050505 95%),
+        url('/assets/images/pergolas/Mulholland-pergola.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-color: transparent;
+      padding: 70px 20px 0 20px;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .luxury-pill {
+      display: none;
+    }
+    
+    .hero-title {
+      font-size: 28px !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.65px !important;
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 100%;
+      flex-direction: column;
+      display: flex;
+    }
+    
+    .mobile-separator {
+      display: block;
+      width: calc(100% + 40px);
+      height: 1px;
+      background: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+    }
+
+    .promo-box {
+      width: 100% !important;
+      max-width: 100% !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 0 20px 0 !important;
+      align-items: center !important;
+      justify-content: center;
+    }
+    
+    .promo-plus {
+      display: none;
+    }
+
+    .promo-text-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .promo-text {
+      text-align: center;
+      font-size: 20px !important;
+      line-height: 25px !important;
+      display: block;
+    }
+
+    .promo-white, .promo-gold {
+      font-size: 20px !important;
+      line-height: 25px !important;
+    }
+
+    .promo-subtext {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-style: italic;
+      color: #FFF;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .hero-text-group {
+      text-align: center;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .hero-subtitle {
+      font-size: 13px !important;
+      line-height: 20px !important;
+      margin-bottom: 16px;
+    }
+    
+    .hero-italic {
+      font-size: 12px !important;
+    }
+
+    .hero-buttons {
+      width: 100%;
+      margin: 0 0 28px 0; 
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-white {
+      display: none !important;
+    }
+
+    .btn-blue {
+      flex: none;
+      width: 250px;
+      height: 45px;
+      min-height: 45px;
+      font-size: 12px;
+      line-height: 16px;
+      margin: 0;
+      border-radius: 4px;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .hero-icons {
+      background: transparent;
+      width: 100%;
+      margin: 0;
+      padding: 0 10px 40px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      box-sizing: border-box;
+      flex-wrap: nowrap;
+      gap: 5px;
+    }
+
+    .icon-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .icon-item img {
+      height: 28px;
+      width: auto;
+      margin: 0;
+    }
+
+    /* Tint icons blue */
+    .blue-icon-mobile {
+      filter: invert(29%) sepia(97%) saturate(1210%) hue-rotate(193deg) brightness(85%) contrast(87%);
+    }
+
+    .icon-item span {
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+      white-space: normal;
+    }
+
+    .hero-right {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    .form-container {
+      width: 100% !important;
+      max-width: 100% !important;
+      border-radius: 0;
+    }
+    
+    .form-inner {
+      padding: 30px 20px 50px 20px; 
+    }
+
+    .form-title {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 28px; 
+    }
+  }
+</style>

@@ -3,19 +3,22 @@
 <header class="header">
   <div class="header-container">
     <div class="logo">
-      <img src="/gates-and-fences/assets/images/header/Mulholland-Logo-.svg" alt="Mulholland Brand Logo" />
+      <img src="/assets/images/header/Mulholland-Logo-.svg" alt="Mulholland Brand Logo" />
     </div>
     
     <div class="header-right">
-      <a href="tel:8005625770" class="btn-phone desktop-only">
-        <img src="/gates-and-fences/assets/images/header/phone-header.svg" alt="Phone" class="phone-icon" />
+      <a href="tel:8005625770" class="btn-phone-new desktop-only">
+        <img src="/assets/images/header/phone.svg" alt="Phone" class="new-phone-icon" />
         (800) 562-5770
       </a>
-      <a href="#estimate" class="btn-free-estimate desktop-only">FREE ESTIMATE</a>
+      <a href="#estimate" class="btn-free-new desktop-only">
+        <img src="/assets/images/header/arrows.svg" alt="Arrow" class="new-arrow-icon" />
+        FREE ESTIMATE
+      </a>
 
       <a href="tel:8005625770" class="btn-phone-mobile mobile-only">
         <div class="m-phone-top">
-          <img src="/gates-and-fences/assets/images/header/phone-header.svg" alt="Phone" class="m-phone-icon" />
+          <img src="/assets/images/header/phone.svg" alt="Phone" class="m-phone-icon" />
           <span class="m-phone-call-now">Call Now</span>
         </div>
         <span class="m-phone-number">(800) 562-5770</span>
@@ -25,104 +28,119 @@
 </header>
 
 <style>
- .header {
- background-color: rgba(255, 255, 255, 0.94);
- border-bottom: 1px solid #D9D9D9;
- width: 100%;
- height: 80px;
- display: flex;
- align-items: center;
- position: sticky;
- top: 0;
- z-index: 100;
- backdrop-filter: blur(5px);
- }
- 
- .header-container {
- width: 100%;
- max-width: 1920px;
- margin: 0 auto;
- padding-left: 110px;
- padding-right: 40px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- height: 100%;
- }
+  .header {
+    background-color: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #D9D9D9;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+  }
+  
+  .header-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 0; /* Removed right padding so the button hits the edge */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 
- .logo {
- height: 100%;
- display: flex;
- align-items: center;
- }
+  .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 
- .logo img {
- height: 45px; /* Adjust to fit well within 80px */
- width: auto;
- }
+  .logo img {
+    height: 45px;
+    width: auto;
+  }
 
- .header-right {
- display: flex;
- align-items: center;
- height: 48px;
- }
+  .header-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Gap between phone and free estimate button */
+    height: 100%; 
+  }
 
- .btn-phone {
- display: flex;
- align-items: center;
- justify-content: center;
- background-color: transparent;
- border: 1px solid #2C65B0;
- border-right: none;
- border-radius: 3px 0 0 3px;
- height: 100%;
- padding: 0 20px;
- color: #14110E;
- font-family: 'Inter', sans-serif;
- font-size: 17px;
- line-height: 24px;
- letter-spacing: 0.08em; /* 8% */
- text-decoration: none;
- transition: background-color 0.2s ease;
- }
+  .btn-phone-new {
+    display: flex;
+    width: 230px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2C65B0;
+    background-color: transparent;
+    text-decoration: none;
+    gap: 8px;
+    color: #14110E;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
 
- .btn-phone:hover {
- background-color: rgba(0, 0, 0, 0.03);
- }
+  .btn-phone-new:hover {
+    opacity: 0.8;
+  }
 
- .phone-icon {
- width: 18px;
- height: auto;
- margin-right: 8px;
- }
+  .new-phone-icon {
+    width: 15px;
+    height: auto;
+    transform: rotate(9deg);
+  }
 
- .btn-free-estimate {
- display: flex;
- align-items: center;
- justify-content: center;
- background-color: #2C65B0;
- color: #ffffff;
- font-family: 'Raleway', sans-serif;
- font-weight: 700; /* Bold */
- font-size: 17px;
- line-height: 24px;
- letter-spacing: 0.13em; /* 13% */
- height: 100%;
- padding: 0 25px;
- border: 1px solid #2C65B0;
- border-radius: 0 3px 3px 0;
- text-decoration: none;
- transition: background-color 0.2s ease;
- }
+  .btn-free-new {
+    display: flex;
+    width: 401px; /* Exact width from user */
+    height: 100%; /* Changed from 74px to 100% to fill the header vertically */
+    align-items: center;
+    justify-content: center;
+    background-color: #2C65B0;
+    opacity: 0.94; /* Opacity from user */
+    color: #FFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    gap: 20px; /* Increased gap from 10px to 20px */
+    padding: 0; /* Remove padding as we use fixed width */
+    border-radius: 0; 
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+  }
 
- .btn-free-estimate:hover {
- background-color: #22518c;
- border-color: #22518c;
- }
+  .btn-free-new:hover {
+    background-color: #22518c;
+  }
 
- @media (max-width: 1024px) {
- .header-container { padding-left: 40px; padding-right: 40px; }
- }
+  .new-arrow-icon {
+    height: 18px; /* Adjusting arrow size naturally */
+    width: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .header-container { padding-left: 40px; padding-right: 40px; }
+  }
 </style>
 
 <style is:global>

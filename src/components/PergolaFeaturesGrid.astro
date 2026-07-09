@@ -1,0 +1,136 @@
+---
+// PergolaFeaturesGrid.astro
+const features = [
+  {
+    title: "One Trusted Local Team",
+    text: "A single point of contact from design to manufacturing and final installation. No third-party subcontractors or finger-pointing.",
+    icon: "icon-team.svg",
+    maxWidth: 305
+  },
+  {
+    title: "Custom-Fabricated Locally",
+    text: "Every pergola is custom-built to your patio's exact dimensions in our local LA factory. No cheap, flimsy pre-made kits.",
+    icon: "icon-factory.svg",
+    maxWidth: 292
+  },
+  {
+    title: "Rust-Proof Marine Aluminum",
+    text: "Fabricated from 6063-T5 architectural aluminum with a marine-grade powder coating that never rusts, rots, warps, or splits.",
+    icon: "icon-rustproof.svg",
+    maxWidth: 281
+  },
+  {
+    title: "Flexible 0% Financing",
+    text: "Take advantage of our 18 Months No Interest Financing and start your project today with payments that fit your budget.",
+    icon: "icon-financing.svg",
+    maxWidth: 300
+  }
+];
+---
+
+<section class="pfg-section">
+  <div class="pfg-left">
+    <img src="/assets/images/pergolas/features-grid/pergola-bbq.jpg" alt="Mulholland Pergola" class="pfg-image" />
+  </div>
+  <div class="pfg-right">
+    <div class="pfg-grid">
+      {features.map(f => (
+        <div class="pfg-item">
+          <img src={`/assets/images/pergolas/features-grid/${f.icon}`} alt={f.title} class="pfg-icon" />
+          <h3 class="pfg-title">{f.title}</h3>
+          <p class="pfg-text">{f.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pfg-section {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    background: #F8F8F8;
+    box-sizing: border-box;
+  }
+
+  .pfg-left {
+    width: 50%;
+    flex-shrink: 0;
+    position: relative;
+    min-height: 600px;
+  }
+
+  .pfg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pfg-right {
+    width: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 60px;
+    padding-right: max(20px, calc((100vw - 1430px) / 2 + 20px));
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+  }
+
+  .pfg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 30px;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .pfg-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pfg-icon {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    object-position: left;
+    margin-bottom: 12px;
+  }
+
+  .pfg-title {
+    color: #14110E;
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+  }
+
+  .pfg-text {
+    color: #635C57;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1200px) {
+    .pfg-section {
+      display: none !important;
+    }
+  }
+</style>

@@ -1,0 +1,498 @@
+---
+// PergolaStyles.astro
+---
+<section class="styles-section">
+  <div class="styles-container">
+    
+    <!-- DESKTOP VERSION -->
+    <div class="ps-desktop">
+      <div class="styles-header">
+        <h2 class="sh-title">Our Three Signature Aluminum Pergola Styles</h2>
+        <p class="sh-desc">
+          Every Mulholland pergola is custom-built to your property's exact dimensions. <span class="sh-desc-bold"><br/>Choose the design that fits your architectural vision.</span>
+        </p>
+      </div>
+
+      <div class="styles-grid">
+        <div class="style-card">
+          <div class="sc-top">
+            <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="sc-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+            <h3 class="sc-title">Profile 24 Series</h3>
+            <p class="sc-subtitle">(The Most Versatile & Customizable)</p>
+          </div>
+          <div class="sc-image-wrapper">
+            <img src="/assets/images/pergolas/Profile 24 Series-.jpg" alt="Profile 24 Series Pergola" class="sc-image" />
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="sc-top">
+            <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="sc-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+            <h3 class="sc-title">Aluminum Weave Series</h3>
+            <p class="sc-subtitle">(Unique "Basket Weave" Artistry)</p>
+          </div>
+          <div class="sc-image-wrapper">
+            <img src="/assets/images/pergolas/Aluminum Weave Series-.jpg" alt="Aluminum Weave Series Pergola" class="sc-image" />
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="sc-top">
+            <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="sc-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+            <h3 class="sc-title">Hi-Tech Series</h3>
+            <p class="sc-subtitle">(Sleek, Ultra-Modern & High-Shade)</p>
+          </div>
+          <div class="sc-image-wrapper">
+            <img src="/assets/images/pergolas/Hi-Tech Series-.jpg" alt="Hi-Tech Series Pergola" class="sc-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE VERSION -->
+    <div class="ps-mobile">
+      <div class="ps-mobile-header">
+        <h2 class="sh-title-mobile">Our Three Signature Aluminum Pergola Styles</h2>
+        <p class="sh-desc-mobile">
+          Every Mulholland pergola is custom-built to your property's exact dimensions. <span class="sh-desc-bold-mobile">Choose the design that fits your architectural vision.</span>
+        </p>
+      </div>
+
+      <div class="ps-slider-wrapper">
+        <div class="ps-slider" id="pergolaSlider">
+          <div class="ps-slide-card">
+            <div class="ps-slide-top">
+              <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="ps-slide-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+              <h3 class="ps-slide-title">Profile 24 Series</h3>
+              <p class="ps-slide-subtitle">(The Most Versatile & Customizable)</p>
+            </div>
+            <div class="ps-slide-image-wrapper">
+              <img src="/assets/images/pergolas/Profile 24 Series-.jpg" alt="Profile 24 Series" class="ps-slide-image" />
+            </div>
+          </div>
+
+          <div class="ps-slide-card">
+            <div class="ps-slide-top">
+              <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="ps-slide-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+              <h3 class="ps-slide-title">Aluminum Weave Series</h3>
+              <p class="ps-slide-subtitle">(Unique "Basket Weave" Artistry)</p>
+            </div>
+            <div class="ps-slide-image-wrapper">
+              <img src="/assets/images/pergolas/Aluminum Weave Series-.jpg" alt="Aluminum Weave Series" class="ps-slide-image" />
+            </div>
+          </div>
+
+          <div class="ps-slide-card">
+            <div class="ps-slide-top">
+              <img src="/assets/images/pergolas/icon-arrow-white.svg" alt="Arrow Down" class="ps-slide-icon" onerror="this.src='/assets/images/pergolas/icon-arrow-down.svg'" />
+              <h3 class="ps-slide-title">Hi-Tech Series</h3>
+              <p class="ps-slide-subtitle">(Sleek, Ultra-Modern & High-Shade)</p>
+            </div>
+            <div class="ps-slide-image-wrapper">
+              <img src="/assets/images/pergolas/Hi-Tech Series-.jpg" alt="Hi-Tech Series" class="ps-slide-image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="ps-slider-dots" id="pergolaSliderDots">
+          <!-- Dots injected by JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .styles-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #FFF;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .styles-container {
+    width: 100%;
+    max-width: 1769px;
+  }
+
+  .ps-mobile {
+    display: none; /* Hidden by default on desktop */
+  }
+
+  .ps-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+  }
+
+  /* DESKTOP CSS */
+  .styles-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .sh-title {
+    color: #312C2C;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -0.9px;
+    margin: 0;
+    max-width: 1498px;
+  }
+
+  .sh-desc {
+    color: #2C65B0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0;
+    max-width: 1266px;
+  }
+
+  .sh-desc-bold {
+    font-weight: 800;
+  }
+
+  .styles-grid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .style-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .sc-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #2C65B0;
+    height: 225px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .sc-icon {
+    width: 26px;
+    height: 25px;
+    margin-bottom: 5px;
+  }
+
+  .sc-title {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .sc-subtitle {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+  }
+
+  .sc-image-wrapper {
+    width: 100%;
+    height: 507px;
+    overflow: hidden;
+  }
+
+  .sc-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 1200px) {
+    .sh-title { font-size: 38px; }
+    .sh-desc { font-size: 28px; line-height: 34px; }
+    .sc-image-wrapper { aspect-ratio: 4 / 3; }
+  }
+
+  /* MOBILE CSS (Exclusive Block) */
+  @media (max-width: 900px) {
+    .ps-desktop {
+      display: none !important; /* Hide desktop block entirely */
+    }
+
+    .ps-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+    }
+
+    .styles-section {
+      padding: 60px 0; /* Bleed for slider */
+    }
+
+    .ps-mobile-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+      gap: 15px;
+    }
+
+    .sh-title-mobile {
+      display: flex;
+      width: 358px;
+      height: 57px;
+      flex-direction: column;
+      justify-content: center;
+      color: #000;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 27px;
+      letter-spacing: -0.9px;
+      margin: 0;
+    }
+
+    .sh-desc-mobile {
+      width: 336px;
+      color: #2C65B0;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      margin: 0;
+    }
+
+    .sh-desc-bold-mobile {
+      font-weight: 800;
+      display: block;
+    }
+
+    .ps-slider-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ps-slider {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      width: 100%;
+      padding: 0;
+      gap: 0;
+      box-sizing: border-box;
+    }
+
+    .ps-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ps-slide-card {
+      min-width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+      scroll-snap-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ps-slide-top {
+      width: 347px;
+      height: 137px;
+      padding: 0 10px;
+      gap: 5px;
+      background: #2C65B0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .ps-slide-icon {
+      width: 15px;
+      height: 16px;
+      margin-bottom: 5px;
+    }
+
+    .ps-slide-title {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 24px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .ps-slide-subtitle {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.75px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .ps-slide-image-wrapper {
+      width: 347px;
+      height: 271px;
+    }
+
+    .ps-slide-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ps-slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+</style>
+
+<style is:global>
+  .ps-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .ps-dot.active {
+    background-color: #2C65B0;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // We bind only if the mobile slider is in DOM
+    const grid = document.getElementById('pergolaSlider');
+    const dotsContainer = document.getElementById('pergolaSliderDots');
+    if (!grid || !dotsContainer) return;
+
+    const cards = grid.querySelectorAll('.ps-slide-card');
+    if (cards.length === 0) return;
+
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    // Create dots dynamically
+    cards.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('ps-dot');
+      if (index === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        goToSlide(index);
+        resetAutoPlay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.ps-dot');
+
+    const updateDots = (index) => {
+      dots.forEach(d => d.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    };
+
+    const goToSlide = (index) => {
+      if (index < 0 || index >= cards.length) return;
+      currentIndex = index;
+      const card = cards[currentIndex];
+      const scrollPos = card.offsetLeft - (grid.offsetWidth / 2) + (card.offsetWidth / 2);
+      grid.scrollTo({
+        left: scrollPos,
+        behavior: 'smooth'
+      });
+      updateDots(currentIndex);
+    };
+
+    const nextSlide = () => {
+      let nextIndex = currentIndex + 1;
+      if (nextIndex >= cards.length) nextIndex = 0;
+      goToSlide(nextIndex);
+    };
+
+    const startAutoPlay = () => {
+      autoPlayInterval = setInterval(nextSlide, 3500);
+    };
+
+    const resetAutoPlay = () => {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    };
+
+    // Listen to scroll to update dot
+    grid.addEventListener('scroll', () => {
+      let closestIndex = 0;
+      let minDiff = Infinity;
+      const scrollCenter = grid.scrollLeft + (grid.offsetWidth / 2);
+
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+        const diff = Math.abs(scrollCenter - cardCenter);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closestIndex = index;
+        }
+      });
+
+      if (closestIndex !== currentIndex) {
+        currentIndex = closestIndex;
+        updateDots(currentIndex);
+      }
+    });
+
+    // Pause on touch
+    grid.addEventListener('touchstart', () => clearInterval(autoPlayInterval), { passive: true });
+    grid.addEventListener('touchend', () => startAutoPlay());
+
+    // Only start autoplay if mobile is visible
+    if (window.innerWidth <= 900) {
+      startAutoPlay();
+    }
+  });
+</script>

@@ -1,0 +1,143 @@
+---
+// PergolasFinancing.astro
+---
+<section class="pergolas-financing">
+  <div class="pf-financing-row">
+    <p class="pf-financing-text">
+      <span class="pf-financing-text-lines">
+        <span class="pf-financing-line-rule"></span>
+        <span class="pf-financing-label">
+          <span class="pf-financing-blue">0% FINANCING</span>
+          <span class="pf-financing-black"> AVAILABLE</span>
+        </span>
+        <span class="pf-financing-line-rule"></span>
+      </span>
+    </p>
+    
+    <div class="pf-financing-cards">
+      <img src="/assets/images/hero/cc-paypal 1.svg" alt="PayPal" class="pf-financing-card-icon" />
+      <img src="/assets/images/hero/cc-amex 1.svg" alt="Amex" class="pf-financing-card-icon" />
+      <img src="/assets/images/hero/cc-discover 1.svg" alt="Discover" class="pf-financing-card-icon" />
+      <img src="/assets/images/hero/cc-mastercard 1.svg" alt="Mastercard" class="pf-financing-card-icon" />
+      <img src="/assets/images/hero/cc-visa 1.svg" alt="Visa" class="pf-financing-card-icon" />
+    </div>
+
+    <a href="#estimate" class="pf-financing-link">
+      <img src="/assets/images/hero/Arrow 4.svg" alt="" class="pf-financing-arrow" />
+      Flexible Payment Options for Your Project
+    </a>
+  </div>
+</section>
+
+<style>
+  .pergolas-financing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pf-financing-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: transparent;
+    max-width: 1719px;
+    width: 100%;
+  }
+
+  .pf-financing-text {
+    margin: 0;
+  }
+
+  .pf-financing-text-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .pf-financing-line-rule {
+    height: 1px;
+    width: 100%;
+    background-color: #8BA8CC; /* Light blue rule line */
+    display: block;
+  }
+
+  .pf-financing-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    white-space: nowrap;
+  }
+
+  .pf-financing-blue { color: #2C65B0; }
+  .pf-financing-black { color: #182C49; }
+
+  .pf-financing-cards {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pf-financing-card-icon {
+    margin: 0 -5px;
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .pf-financing-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 27px;
+    color: #312C2C;
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .pf-financing-arrow {
+    height: 16px;
+    width: auto;
+    flex-shrink: 0;
+    filter: brightness(0); /* Make the arrow black */
+  }
+
+  @media (max-width: 1200px) {
+    .pf-financing-row {
+      gap: 20px;
+    }
+    .pf-financing-label {
+      font-size: 22px;
+    }
+    .pf-financing-link {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pf-financing-row {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+    .pf-financing-link {
+      white-space: normal;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+</style>

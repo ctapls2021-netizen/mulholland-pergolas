@@ -1,0 +1,397 @@
+---
+// PrivacyScreen.astro
+import FinancingSectionMobile from './FinancingSectionMobile.astro';
+---
+<section class="privacy-section">
+  
+  <!-- Top White Area -->
+  <div class="privacy-top">
+    <div class="pt-container">
+      <h2 class="pt-title">Add Architectural Privacy with a Free Laser-Cut Screen</h2>
+      <p class="pt-desc">
+        A premium pergola should do more than just shade your head—it should turn your backyard into a completely private sanctuary. <span class="pt-blue-bold">For a limited time, every Mulholland Pergola project includes a FREE 4' x 8' Laser-Cut Decorative Backdrop Panel.</span> Fabricated in our local factory from the same marine-grade, rust-proof aluminum, this designer panel acts as a stunning architectural focal point, a functional windbreak, or a privacy shield to block unsightly views from neighboring properties
+      </p>
+    </div>
+  </div>
+
+  <!-- Middle Blue Promo Box -->
+  <div class="promo-wrapper">
+    <div class="promo-box">
+      <div class="promo-text-container">
+        <span class="promo-bold">Get a complimentary 4' x 8' designer backdrop panel</span>
+        <span class="promo-light"> with your pergola order ($1,200+ Value).</span>
+      </div>
+      <img src="/assets/images/pergolas/icon-value-gift.svg" alt="Gift Icon" class="promo-icon" />
+    </div>
+  </div>
+
+  <!-- Bottom Image Area -->
+  <div class="privacy-bottom">
+    <img src="/assets/images/pergolas/privacy-screen-bg.webp" alt="Laser-Cut Screen" class="pb-bg-image" />
+    
+    <div class="pb-container">
+      <h3 class="pb-title">How You Can Use Your Free Panel</h3>
+      
+      <div class="pb-features">
+        
+        <!-- Feature 1 -->
+        <div class="pb-feature">
+          <img src="/assets/images/pergolas/icon-privacy-wall.svg" alt="Privacy Wall" class="pb-icon" />
+          <div class="pb-feature-text">
+            <h4 class="pb-feature-title">Privacy Wall</h4>
+            <p class="pb-feature-desc">Mount it to the side of your pergola to block<br />street-view or neighbor-view.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="pb-feature">
+          <img src="/assets/images/pergolas/icon-focal-art.svg" alt="Architectural Focal Art" class="pb-icon" />
+          <div class="pb-feature-text">
+            <h4 class="pb-feature-title">Architectural Focal Art</h4>
+            <p class="pb-feature-desc">Use it as a dramatic backdrop behind your outdoor TV, BBQ island, or lounge seating.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="pb-feature">
+          <img src="/assets/images/pergolas/icon-vertical-trellis.svg" alt="Vertical Garden Trellis" class="pb-icon" />
+          <div class="pb-feature-text">
+            <h4 class="pb-feature-title">Vertical Garden Trellis</h4>
+            <p class="pb-feature-desc">Let climbing vines and ivy grow naturally through the precision-cut geometric patterns.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Financing Bar (Hidden on desktop automatically) -->
+  <FinancingSectionMobile />
+
+</section>
+
+<style>
+  .privacy-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+  }
+
+  /* TOP SECTION */
+  .privacy-top {
+    width: 100%;
+    padding: 100px 20px 100px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .pt-title {
+    display: flex;
+    width: 100%;
+    max-width: 1498px;
+    flex-direction: column;
+    justify-content: center;
+    color: #312C2C;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: -0.9px;
+    margin: 0;
+  }
+
+  .pt-desc {
+    width: 100%;
+    max-width: 1266px;
+    color: #14110E;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .pt-blue-bold {
+    color: #2C65B0;
+    font-weight: 800;
+  }
+
+  /* MIDDLE PROMO BOX */
+  .promo-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    margin-top: -51px; /* Pull it up by half its height */
+    margin-bottom: -51px; /* Push the next section up by half its height */
+  }
+
+  .promo-box {
+    width: 100%;
+    max-width: 1338px;
+    height: 102px;
+    background: #2C65B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .promo-text-container {
+    text-align: center;
+  }
+
+  .promo-bold {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+  }
+
+  .promo-light {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .promo-icon {
+    width: 60px;
+    height: auto;
+  }
+
+  /* BOTTOM IMAGE SECTION */
+  .privacy-bottom {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px 100px 20px;
+    box-sizing: border-box;
+  }
+
+  .pb-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .pb-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  .pb-title {
+    display: flex;
+    width: 100%;
+    max-width: 1029px;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 37px;
+    letter-spacing: -0.9px;
+    margin: 0;
+  }
+
+  .pb-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1157px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .pb-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .pb-icon {
+    height: 93px;
+    width: auto;
+  }
+
+  .pb-feature-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pb-feature-title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .pb-feature-desc {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.75px;
+    margin: 0;
+    max-width: 373px;
+  }
+
+  @media (max-width: 1200px) {
+    .privacy-top {
+      display: none !important;
+    }
+    .promo-wrapper {
+      margin: 0 !important;
+    }
+    .promo-box {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
+      gap: 15px;
+    }
+    .promo-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      order: 2; /* Put text below icon */
+    }
+    .promo-icon {
+      order: 1; /* Put icon on top */
+      width: 50px;
+    }
+    .promo-bold {
+      display: flex;
+      width: 276px;
+      height: 49px;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 24px;
+    }
+    .promo-light {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    .privacy-bottom {
+      padding: 50px 20px;
+      min-height: auto;
+    }
+    .pb-title {
+      display: flex;
+      width: 229px;
+      height: 78px;
+      flex-direction: column;
+      justify-content: center;
+      color: #FFF;
+      text-align: center;
+      font-family: 'Raleway', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 30px;
+      letter-spacing: -0.9px;
+    }
+    .pb-features {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .pb-feature {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      gap: 15px;
+    }
+    .pb-icon {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+    .pb-feature-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .pb-feature-title {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 24px;
+      text-align: left;
+      margin: 0;
+    }
+    .pb-feature-desc {
+      color: #FFF;
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      width: 241px;
+      text-align: left;
+    }
+    .pb-container {
+      gap: 30px;
+    }
+  }
+</style>

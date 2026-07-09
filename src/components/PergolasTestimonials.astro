@@ -1,0 +1,270 @@
+---
+const reviews = [
+  { platform: 'Google', score: '5.0', logo: 'google.svg', width: 96.21, height: 41.17 },
+  { platform: 'Facebook', score: '4.9', logo: 'facebook.svg', width: 122.37, height: 23.71 },
+  { platform: 'Houzz', score: '5.0', logo: 'Houzz.svg', width: 125.99, height: 28.87 },
+  { platform: 'Yelp', score: '5.0', logo: 'YELP.svg', width: 98.03, height: 46.84 }
+];
+
+const testimonials = [
+  {
+    title: "The ultimate backyard upgrade!",
+    text: "We spent years avoiding our backyard in the afternoon because the sun was just brutal. We called Mulholland, and they designed a gorgeous motorized louvered pergola for us. The quality is incredible—the louvers rotate silently, and the rain sensor closed the roof perfectly during our last storm. Plus, we got the 20% off promotion and they included a beautiful free laser-cut backdrop screen that blocks our neighbor's two-story window perfectly. Dealing with one team from design to installation made the entire process seamless.",
+    name: "Robert & Chloe M.",
+    city: "Pasadena, CA",
+    verified: "Verified Project: Motorized Louvered Pergola with Free Leaf-Pattern Privacy Screen"
+  },
+  {
+    title: "Perfect for coastal salt air — absolutely zero maintenance.",
+    text: "Living right on the coast in Del Mar, our old wood pergola rotted and warped within three years. We upgraded to Mulholland's wood-like aluminum pergola and it is a night-and-day difference. It looks exactly like natural cedar, but it never fades, warps, or rusts in the salt air. We also took advantage of their 18 Months No Interest Financing, which made budgeting a breeze. If you want a high-end pergola built to last, skip the cheap pre-made kits and go with Mulholland.",
+    name: "Marcus T.",
+    city: "Del Mar, CA",
+    verified: "Verified Project: Wood-Look Aluminum Pergola with Integrated Side Privacy Slats"
+  },
+  {
+    title: "Flawless local craftsmanship from factory to backyard.",
+    text: "The fact that they manufacture everything in their own local factory is why we chose them. We wanted our pergola's frame to match the exact custom charcoal gray of our home's window trims, and they matched it perfectly. They also handled all the electrical wiring for the integrated LED lights and heaters. Getting the 20% off summer special was a huge bonus, and the free 4'x8' laser-cut panel we received acts as a stunning piece of outdoor art behind our BBQ island. Five-star service all around!",
+    name: "Elena G.",
+    city: "Sherman Oaks, CA",
+    verified: "Verified Project: Modern Attached Louvered Pergola with Integrated LED Lighting"
+  }
+];
+---
+<section class="test-section" id="testimonials">
+  <div class="test-blue-box">
+  
+    <!-- Top Reviews Row -->
+    <div class="test-reviews-row">
+      {reviews.map(r => (
+        <div class="test-review-item">
+          <img src={`/gates-and-fences/assets/images/testimonials/${r.logo}`} alt={r.platform} class="test-logo" style={`width: ${r.width}px; height: ${r.height}px;`} />
+          <span class="test-score">{r.score}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Header Content -->
+    <div class="test-header">
+      <div class="test-subtitle">VOICES OF TRUST</div>
+      <h2 class="test-title">What your neighbors <br class="test-mobile-br" />are saying</h2>
+      <p class="test-desc">With over 30 years of local manufacturing and installation, we have secured and beautified thousands of Southern California homes. Read about their experiences.</p>
+    </div>
+
+    <!-- Data Grid -->
+    <div class="test-grid">
+      {testimonials.map(t => (
+        <div class="test-card">
+          <div class="test-stars">
+            <img src="/gates-and-fences/assets/images/testimonials/star.svg" alt="5 Stars" />
+          </div>
+          <h3 class="test-card-title">{t.title}</h3>
+          <p class="test-card-text">{t.text}</p>
+          
+          <div class="test-divider"></div>
+          
+          <div class="test-author-name">{t.name}</div>
+          <div class="test-author-city">{t.city}</div>
+          
+          <div class="test-verified">
+            <img src="/gates-and-fences/assets/images/testimonials/verified.svg" alt="Verified" class="test-verified-icon" />
+            <span class="test-verified-text">{t.verified}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</section>
+
+<style is:global>
+  .test-section {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/gates-and-fences/assets/images/pergolas/41030fc9d4ba7812b1dbfc7b259e0cb5bc8083b5.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+  }
+
+  .test-blue-box {
+    width: 100%;
+    max-width: 1430px;
+    background-color: rgba(44, 101, 176, 0.95);
+    border-radius: 10px;
+    padding: 70px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .test-reviews-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .test-review-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .test-logo {
+    object-fit: contain;
+  }
+
+  .test-score {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #ffffff;
+    letter-spacing: 2.64px;
+  }
+
+  .test-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+
+  .test-subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2.64px;
+    color: #EAC848;
+    margin-bottom: 12px;
+  }
+
+  .test-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 3vw, 45px);
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+  }
+
+  .test-desc {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .test-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+
+  .test-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 36px 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 480px;
+  }
+
+  .test-stars {
+    margin-bottom: 20px;
+  }
+
+  .test-stars img {
+    height: 18px;
+    width: auto;
+  }
+
+  .test-card-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: clamp(18px, 1.8vw, 24px);
+    line-height: 1.2;
+    color: #14110e;
+    margin: 0 0 16px 0;
+    min-height: 58px;
+  }
+
+  .test-card-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #635C57;
+    margin: 0 0 28px 0;
+    flex-grow: 1;
+  }
+
+  .test-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #E5E2DE;
+    margin-bottom: 20px;
+  }
+
+  .test-author-name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #14110e;
+    margin-bottom: 4px;
+  }
+
+  .test-author-city {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #635C57;
+    margin-bottom: 16px;
+  }
+
+  .test-verified {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .test-verified-icon {
+    height: 14px;
+    width: auto;
+  }
+
+  .test-verified-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #2C65B0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1200px) {
+    .test-blue-box {
+      padding: 40px 30px;
+    }
+    .test-reviews-row {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .test-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .test-card {
+      min-height: auto;
+    }
+  }
+</style>

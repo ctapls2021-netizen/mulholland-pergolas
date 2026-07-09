@@ -16,11 +16,11 @@
     </p>
     
     <div class="fsm-financing-cards">
-      <img src="/gates-and-fences/assets/images/hero/movil/cc-paypal 1.svg" alt="PayPal" class="fsm-financing-card-icon" />
-      <img src="/gates-and-fences/assets/images/hero/movil/cc-amex 1.svg" alt="Amex" class="fsm-financing-card-icon" />
-      <img src="/gates-and-fences/assets/images/hero/movil/cc-discover 1.svg" alt="Discover" class="fsm-financing-card-icon" />
-      <img src="/gates-and-fences/assets/images/hero/movil/cc-mastercard 1.svg" alt="Mastercard" class="fsm-financing-card-icon" />
-      <img src="/gates-and-fences/assets/images/hero/movil/cc-visa 1.svg" alt="Visa" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-paypal 1.svg" alt="PayPal" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-amex 1.svg" alt="Amex" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-discover 1.svg" alt="Discover" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-mastercard 1.svg" alt="Mastercard" class="fsm-financing-card-icon" />
+      <img src="/assets/images/hero/movil/cc-visa 1.svg" alt="Visa" class="fsm-financing-card-icon" />
     </div>
 
     <!-- CTA Button (Pill style with translucent background and original dimensions) -->
@@ -36,7 +36,7 @@
   </div>
 </section>
 
-<style>
+<style is:global>
   /* Hidden on desktop */
   .financing-section-mobile {
     display: none;
@@ -45,7 +45,7 @@
   }
 
   /* Visible and styled only on mobile */
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .financing-section-mobile {
       display: flex !important;
       align-items: center;
@@ -89,7 +89,8 @@
     .fsm-financing-label {
       font-family: 'Inter', sans-serif;
       font-weight: 700;
-      font-size: 17px !important; /* Adjusted size to fit inside 245px beautifully */
+      font-size: 17.5px !important; /* Slightly larger to fill width */
+      letter-spacing: 0.3px; /* Stretches text to exactly match 245px lines */
       line-height: 38px !important;
       white-space: nowrap;
       text-align: center;
@@ -121,6 +122,9 @@
       height: 38px !important;
       object-fit: contain !important;
       margin: 0 !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
     }
 
     /* Compenses internal shadow of card SVGs for alignment */
@@ -137,7 +141,7 @@
       background: rgba(255, 255, 255, 0.11) !important;
       border-radius: 45px !important;
       width: calc(100% - 32px) !important;
-      height: 44px !important; /* Original height dimension */
+      height: 29px !important; /* Original height dimension */
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -145,6 +149,7 @@
       text-decoration: none !important;
       border: 1px solid rgba(255, 255, 255, 0.2) !important;
       box-sizing: border-box !important;
+      margin-top: 0px;
     }
 
     .fsm-cta-text {
@@ -153,6 +158,7 @@
       color: #ffffff !important;
       font-weight: 500 !important;
       white-space: nowrap !important;
+      text-align: left;
     }
 
     .fsm-cta-phone {
@@ -162,6 +168,7 @@
       font-weight: 700 !important;
       display: flex !important;
       align-items: center !important;
+      justify-content: flex-start !important;
       gap: 4px !important;
       white-space: nowrap !important;
     }
