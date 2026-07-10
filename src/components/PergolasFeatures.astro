@@ -10,7 +10,7 @@
     <div class="pf-content">
       
       <!-- Feature 1 -->
-      <div class="pf-feature">
+      <div class="pf-feature" data-aos="fade-up" data-aos-delay="200">
         <img src="/assets/images/pergolas/icon-whisper.png" alt="Whisper Quiet" class="pf-icon" />
         <div class="pf-text-block">
           <h3 class="pf-title">Whisper-Quiet Motorized Louvers</h3>
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Feature 2 -->
-      <div class="pf-feature">
+      <div class="pf-feature" data-aos="fade-up" data-aos-delay="400">
         <img src="/assets/images/pergolas/icon-zeromaint.png" alt="Zero Maintenance" class="pf-icon" />
         <div class="pf-text-block">
           <h3 class="pf-title">Zero-Maintenance Wood-Look Finish</h3>
@@ -118,7 +118,7 @@
     justify-content: center;
   }
 
-  .pf-image-wrapper {
+  .pf-image-wrapper { overflow: hidden;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -130,7 +130,7 @@
     justify-content: flex-start;
   }
 
-  .pf-image {
+  .pf-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -141,7 +141,7 @@
     .pergolas-features-section {
       flex-direction: column;
     }
-    .pf-image-wrapper {
+    .pf-image-wrapper { overflow: hidden;
       display: none;
     }
     .pf-container {
@@ -203,5 +203,11 @@
       margin: 0 !important;
     }
   }
+
+  .pf-image-wrapper:hover .pf-image {
+    transform: scale(1.03);
+  }
 </style>
+
+
 

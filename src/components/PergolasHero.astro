@@ -16,14 +16,14 @@ import PergolasFinancing from './PergolasFinancing.astro';
         <span class="pill-text">LUXURY OUTDOOR LIVING</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-aos="fade-right">
         <span class="title-gold">Save 20%</span>
         <span class="title-white">&nbsp;on Custom Pergolas</span>
       </h1>
 
       <div class="mobile-separator"></div>
 
-      <div class="promo-box">
+      <div class="promo-box promo-animate" data-aos="zoom-in" data-aos-delay="200">
         <div class="promo-plus">+</div>
         <div class="promo-text-wrap">
           <div class="promo-text">
@@ -37,7 +37,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
 
       <div class="mobile-separator"></div>
 
-      <div class="hero-text-group">
+      <div class="hero-text-group" data-aos="fade-right" data-aos-delay="100">
         <p class="hero-subtitle">
           Turn your patio into a luxury, maintenance-free retreat with custom rust-proof aluminum.
         </p>
@@ -46,7 +46,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
         </p>
       </div>
 
-      <div class="hero-buttons">
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
         <a href="#estimate" class="btn-blue">
           <span class="btn-bold">Request Complimentary</span>
           <span class="btn-semibold">On-Site Estimate</span>
@@ -58,7 +58,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
         </a>
       </div>
 
-      <div class="hero-icons">
+      <div class="hero-icons" data-aos="fade-up" data-aos-delay="400">
         <div class="icon-item">
           <img src="/assets/images/pergolas/30-years-experience.svg" alt="30+ Years Experience" class="blue-icon-mobile" />
           <span>30+ Years Experience</span>
@@ -78,7 +78,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
       </div>
     </div>
 
-    <div class="hero-right" id="estimate">
+    <div class="hero-right" id="estimate" data-aos="fade-left" data-aos-delay="300">
       <div class="form-container">
         <div class="form-top-bar">
           0% Financing Available • 18 Months 0% interest*
@@ -130,13 +130,13 @@ import PergolasFinancing from './PergolasFinancing.astro';
   </div>
 
   <!-- H1 -->
-  <h1 class="hero-title">
+  <h1 class="hero-title" data-aos="fade-right">
   <span class="pergolas-title-gold">Save 20%</span>
   <span class="pergolas-title-white">on Custom Pergolas</span>
   </h1>
 
   <!-- Promo Box -->
-  <div class="hero-promo-box">
+  <div class="hero-promo-box promo-animate" data-aos="zoom-in" data-aos-delay="200">
     <p class="pergolas-promo-line1">
       Get a <span class="pergolas-promo-gold">Free Designer</span> Privacy Screen
     </p>
@@ -148,7 +148,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
   <p class="hero-supply">Limited summer installation slots available.</p>
 
   <!-- Two CTA Buttons -->
-  <div class="hero-buttons">
+  <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
   <a href="#estimate" class="hero-btn hero-btn-primary">
     <span class="btn-req-bold">Request Complimentary</span> <span class="btn-req-reg">On-Site Estimate</span>
   </a>
@@ -200,7 +200,7 @@ import PergolasFinancing from './PergolasFinancing.astro';
  </div>
 
  <!-- RIGHT COLUMN: Form -->
- <div class="hero-form-col" id="estimate">
+ <div class="hero-form-col" id="estimate" data-aos="fade-left" data-aos-delay="300">
  <div class="hero-form-card">
  <h2 class="form-title">Ready To Get Started<br />On Your Project?</h2>
  <form class="hero-form">
@@ -246,6 +246,24 @@ import PergolasFinancing from './PergolasFinancing.astro';
     padding-top: 100px;
     padding-bottom: 100px;
     overflow: hidden;
+  }
+
+  /* Exciting Promotion Animation */
+  .promo-animate {
+    animation: promoFloat 3s ease-in-out infinite, promoGlow 3s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes promoFloat {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-5px) scale(1.02); }
+    100% { transform: translateY(0px) scale(1); }
+  }
+
+  @keyframes promoGlow {
+    0% { box-shadow: 0 0 10px rgba(234, 200, 72, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(234, 200, 72, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(234, 200, 72, 0.2); }
   }
 
   .hero-pergolas-bg {
@@ -1852,3 +1870,4 @@ import PergolasFinancing from './PergolasFinancing.astro';
  }
 
 </style>
+

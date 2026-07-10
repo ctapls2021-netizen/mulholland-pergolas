@@ -3,7 +3,7 @@
 ---
 <section class="engineered-section">
   <div class="ec-container">
-    <div class="ec-content">
+    <div class="ec-content" data-aos="fade-right">
       <div class="ec-subtitle-container">
         <img src="/assets/images/pergolas/engineered-for-comfort-icon.svg" alt="Icon" class="ec-icon" />
         <h3 class="ec-subtitle">
@@ -26,7 +26,7 @@
     </div>
   </div>
   
-  <div class="ec-image-wrapper">
+  <div class="ec-image-wrapper" data-aos="fade-left" data-aos-delay="200">
     <img src="/assets/images/pergolas/engineered-for-comfort.jpg" alt="Engineered for Comfort" class="ec-image" />
   </div>
 </section>
@@ -137,7 +137,7 @@
     margin: 0;
   }
 
-  .ec-image-wrapper {
+  .ec-image-wrapper { overflow: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -149,7 +149,7 @@
     justify-content: flex-end;
   }
 
-  .ec-image {
+  .ec-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -178,19 +178,19 @@
     .ec-title {
       text-align: center;
     }
-    .ec-image-wrapper {
+    .ec-image-wrapper { overflow: hidden;
       position: relative;
       width: 100%;
       height: auto;
     }
-    .ec-image {
+    .ec-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       width: 100%;
       height: auto;
     }
   }
 
   @media (max-width: 1023px) {
-    .ec-image {
+    .ec-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
       content: url('/assets/images/pergolas/engineered-for-comfort-mobile.jpg');
       height: 222px !important;
       width: 100%;
@@ -244,5 +244,11 @@
       margin: 0 auto;
     }
   }
+
+  .ec-image-wrapper:hover .ec-image {
+    transform: scale(1.03);
+  }
 </style>
+
+
 

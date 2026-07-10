@@ -26,6 +26,8 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/png" href="/assets/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- AOS CSS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
@@ -86,6 +88,23 @@ const { title } = Astro.props;
 							alert("There was an error sending your message. Please try again or call us.");
 						}
 					});
+				});
+			});
+		</script>
+		<!-- AOS JS -->
+		<script is:inline src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', function() {
+				AOS.init({
+					duration: 800,
+					once: true,
+					offset: 100,
+					disable: 'mobile' // Disable on very small devices if it causes issues, but we'll try keeping it by default. Actually let's just initialize it for all.
+				});
+				AOS.init({
+					duration: 800,
+					once: true,
+					offset: 50
 				});
 			});
 		</script>
