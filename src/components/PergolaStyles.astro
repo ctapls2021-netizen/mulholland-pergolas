@@ -409,7 +409,22 @@
     background-color: #2C65B0;
   }
 
-  .ps-card:hover .ps-card-img {
+  .ps-card-img { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+  .ps-card-img-wrapper { overflow: hidden; }
+
+  /* Fix for the actual desktop classes */
+  .sc-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+  .sc-image-wrapper { overflow: hidden; }
+  
+  .style-card:hover .sc-image {
+    transform: scale(1.05);
+  }
+
+  /* Fix for the actual mobile classes */
+  .ps-slide-image { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+  .ps-slide-image-wrapper { overflow: hidden; }
+  
+  .ps-slide-card:hover .ps-slide-image {
     transform: scale(1.05);
   }
 </style>
