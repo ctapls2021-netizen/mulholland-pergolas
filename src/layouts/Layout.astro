@@ -77,10 +77,8 @@ const { title } = Astro.props;
 								body: JSON.stringify(data)
 							});
 
-							btn.innerHTML = "Thank You!";
-							btn.style.backgroundColor = "#28a745";
-							btn.style.color = "#ffffff";
-							form.reset();
+							// Redirect to Thank You page
+							window.location.href = '/thanks-page';
 						} catch (err) {
 							console.error(err);
 							btn.disabled = false;
